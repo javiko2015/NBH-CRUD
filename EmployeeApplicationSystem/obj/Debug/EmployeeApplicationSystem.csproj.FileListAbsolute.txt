@@ -1,0 +1,189 @@
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\EmployeeApplicationSystem\bin\ApplicationInsights.config
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\EmployeeApplicationSystem\bin\EmployeeApplicationSystem.dll.config
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\EmployeeApplicationSystem\bin\EmployeeApplicationSystem.dll
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\EmployeeApplicationSystem\bin\EmployeeApplicationSystem.pdb
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\EmployeeApplicationSystem\bin\Antlr3.Runtime.dll
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\EmployeeApplicationSystem\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\EmployeeApplicationSystem\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\EmployeeApplicationSystem\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\EmployeeApplicationSystem\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\EmployeeApplicationSystem\bin\Microsoft.AI.Web.dll
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\EmployeeApplicationSystem\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\EmployeeApplicationSystem\bin\Microsoft.ApplicationInsights.dll
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\EmployeeApplicationSystem\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\EmployeeApplicationSystem\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\EmployeeApplicationSystem\bin\Newtonsoft.Json.dll
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\EmployeeApplicationSystem\bin\System.Net.Http.Formatting.dll
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\EmployeeApplicationSystem\bin\System.Web.Helpers.dll
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\EmployeeApplicationSystem\bin\System.Web.Http.dll
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\EmployeeApplicationSystem\bin\System.Web.Http.WebHost.dll
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\EmployeeApplicationSystem\bin\System.Web.Mvc.dll
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\EmployeeApplicationSystem\bin\System.Web.Optimization.dll
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\EmployeeApplicationSystem\bin\System.Web.Razor.dll
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\EmployeeApplicationSystem\bin\System.Web.WebPages.Deployment.dll
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\EmployeeApplicationSystem\bin\System.Web.WebPages.dll
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\EmployeeApplicationSystem\bin\System.Web.WebPages.Razor.dll
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\EmployeeApplicationSystem\bin\WebGrease.dll
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\EmployeeApplicationSystem\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\EmployeeApplicationSystem\bin\System.Web.Helpers.xml
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\EmployeeApplicationSystem\bin\System.Web.Mvc.xml
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\EmployeeApplicationSystem\bin\System.Web.Optimization.xml
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\EmployeeApplicationSystem\bin\System.Web.Razor.xml
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\EmployeeApplicationSystem\bin\System.Web.WebPages.xml
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\EmployeeApplicationSystem\bin\System.Web.WebPages.Deployment.xml
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\EmployeeApplicationSystem\bin\System.Web.WebPages.Razor.xml
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\EmployeeApplicationSystem\bin\Antlr3.Runtime.pdb
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\EmployeeApplicationSystem\bin\Newtonsoft.Json.xml
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\EmployeeApplicationSystem\bin\System.Net.Http.Formatting.xml
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\EmployeeApplicationSystem\bin\System.Web.Http.xml
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\EmployeeApplicationSystem\bin\System.Web.Http.WebHost.xml
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\EmployeeApplicationSystem\bin\Microsoft.ApplicationInsights.xml
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\EmployeeApplicationSystem\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\EmployeeApplicationSystem\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\EmployeeApplicationSystem\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\EmployeeApplicationSystem\bin\Microsoft.AI.Web.xml
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\EmployeeApplicationSystem\obj\Debug\EmployeeApplicationSystem.csprojResolveAssemblyReference.cache
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\EmployeeApplicationSystem\obj\Debug\EmployeeApplicationSystem.csproj.CoreCompileInputs.cache
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\EmployeeApplicationSystem\obj\Debug\EmployeeApplicationSystem.dll
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\EmployeeApplicationSystem\obj\Debug\EmployeeApplicationSystem.pdb
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\EmployeeApplicationSystem\bin\es\EmployeeApplicationSystem.resources.dll
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\EmployeeApplicationSystem\obj\Debug\EmployeeApplicationSystem.Resource.resources
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\EmployeeApplicationSystem\obj\Debug\EmployeeApplicationSystem.Resource.es.resources
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\EmployeeApplicationSystem\obj\Debug\EmployeeApplicationSystem.csproj.GenerateResource.Cache
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\EmployeeApplicationSystem\obj\Debug\es\EmployeeApplicationSystem.resources.dll
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\EmployeeApplicationSystem\bin\BusinessLogic.dll
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\EmployeeApplicationSystem\bin\EntityFramework.dll
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\EmployeeApplicationSystem\bin\EntityFramework.SqlServer.dll
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\EmployeeApplicationSystem\bin\DataAccess.dll
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\EmployeeApplicationSystem\bin\BusinessLogic.pdb
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\EmployeeApplicationSystem\bin\BusinessLogic.dll.config
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\EmployeeApplicationSystem\bin\EntityFramework.xml
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\EmployeeApplicationSystem\bin\EntityFramework.SqlServer.xml
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\EmployeeApplicationSystem\bin\DataAccess.pdb
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\EmployeeApplicationSystem\bin\DataAccess.dll.config
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\EmployeeApplicationSystem\bin\ApplicationInsights.config
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\EmployeeApplicationSystem\bin\EmployeeApplicationSystem.dll.config
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\EmployeeApplicationSystem\bin\EmployeeApplicationSystem.dll
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\EmployeeApplicationSystem\bin\EmployeeApplicationSystem.pdb
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\EmployeeApplicationSystem\bin\es\EmployeeApplicationSystem.resources.dll
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\EmployeeApplicationSystem\bin\Antlr3.Runtime.dll
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\EmployeeApplicationSystem\bin\BusinessLogic.dll
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\EmployeeApplicationSystem\bin\DataAccess.dll
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\EmployeeApplicationSystem\bin\EntityFramework.dll
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\EmployeeApplicationSystem\bin\EntityFramework.SqlServer.dll
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\EmployeeApplicationSystem\bin\Microsoft.AI.Agent.Intercept.dll
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\EmployeeApplicationSystem\bin\Microsoft.AI.DependencyCollector.dll
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\EmployeeApplicationSystem\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\EmployeeApplicationSystem\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\EmployeeApplicationSystem\bin\Microsoft.AI.Web.dll
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\EmployeeApplicationSystem\bin\Microsoft.AI.WindowsServer.dll
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\EmployeeApplicationSystem\bin\Microsoft.ApplicationInsights.dll
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\EmployeeApplicationSystem\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\EmployeeApplicationSystem\bin\Microsoft.Web.Infrastructure.dll
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\EmployeeApplicationSystem\bin\Newtonsoft.Json.dll
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\EmployeeApplicationSystem\bin\System.Net.Http.Formatting.dll
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\EmployeeApplicationSystem\bin\System.Web.Helpers.dll
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\EmployeeApplicationSystem\bin\System.Web.Http.dll
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\EmployeeApplicationSystem\bin\System.Web.Http.WebHost.dll
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\EmployeeApplicationSystem\bin\System.Web.Mvc.dll
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\EmployeeApplicationSystem\bin\System.Web.Optimization.dll
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\EmployeeApplicationSystem\bin\System.Web.Razor.dll
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\EmployeeApplicationSystem\bin\System.Web.WebPages.Deployment.dll
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\EmployeeApplicationSystem\bin\System.Web.WebPages.dll
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\EmployeeApplicationSystem\bin\System.Web.WebPages.Razor.dll
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\EmployeeApplicationSystem\bin\WebGrease.dll
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\EmployeeApplicationSystem\bin\BusinessLogic.pdb
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\EmployeeApplicationSystem\bin\BusinessLogic.dll.config
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\EmployeeApplicationSystem\bin\DataAccess.pdb
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\EmployeeApplicationSystem\bin\DataAccess.dll.config
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\EmployeeApplicationSystem\bin\EntityFramework.xml
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\EmployeeApplicationSystem\bin\EntityFramework.SqlServer.xml
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\EmployeeApplicationSystem\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\EmployeeApplicationSystem\bin\System.Web.Helpers.xml
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\EmployeeApplicationSystem\bin\System.Web.Mvc.xml
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\EmployeeApplicationSystem\bin\System.Web.Optimization.xml
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\EmployeeApplicationSystem\bin\System.Web.Razor.xml
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\EmployeeApplicationSystem\bin\System.Web.WebPages.xml
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\EmployeeApplicationSystem\bin\System.Web.WebPages.Deployment.xml
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\EmployeeApplicationSystem\bin\System.Web.WebPages.Razor.xml
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\EmployeeApplicationSystem\bin\Antlr3.Runtime.pdb
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\EmployeeApplicationSystem\bin\Newtonsoft.Json.xml
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\EmployeeApplicationSystem\bin\System.Net.Http.Formatting.xml
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\EmployeeApplicationSystem\bin\System.Web.Http.xml
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\EmployeeApplicationSystem\bin\System.Web.Http.WebHost.xml
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\EmployeeApplicationSystem\bin\Microsoft.ApplicationInsights.xml
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\EmployeeApplicationSystem\bin\Microsoft.AI.DependencyCollector.xml
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\EmployeeApplicationSystem\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\EmployeeApplicationSystem\bin\Microsoft.AI.WindowsServer.xml
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\EmployeeApplicationSystem\bin\Microsoft.AI.Web.xml
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\EmployeeApplicationSystem\obj\Debug\EmployeeApplicationSystem.csprojResolveAssemblyReference.cache
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\EmployeeApplicationSystem\obj\Debug\EmployeeApplicationSystem.Resource.resources
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\EmployeeApplicationSystem\obj\Debug\EmployeeApplicationSystem.Resource.es.resources
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\EmployeeApplicationSystem\obj\Debug\EmployeeApplicationSystem.csproj.GenerateResource.Cache
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\EmployeeApplicationSystem\obj\Debug\EmployeeApplicationSystem.csproj.CoreCompileInputs.cache
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\EmployeeApplicationSystem\obj\Debug\es\EmployeeApplicationSystem.resources.dll
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\EmployeeApplicationSystem\obj\Debug\EmployeeApplicationSystem.dll
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\EmployeeApplicationSystem\obj\Debug\EmployeeApplicationSystem.pdb
+D:\-- Estudio --\Net Framework\NBH-CRUD\EmployeeApplicationSystem\bin\ApplicationInsights.config
+D:\-- Estudio --\Net Framework\NBH-CRUD\EmployeeApplicationSystem\bin\EmployeeApplicationSystem.dll.config
+D:\-- Estudio --\Net Framework\NBH-CRUD\EmployeeApplicationSystem\bin\EmployeeApplicationSystem.dll
+D:\-- Estudio --\Net Framework\NBH-CRUD\EmployeeApplicationSystem\bin\EmployeeApplicationSystem.pdb
+D:\-- Estudio --\Net Framework\NBH-CRUD\EmployeeApplicationSystem\bin\es\EmployeeApplicationSystem.resources.dll
+D:\-- Estudio --\Net Framework\NBH-CRUD\EmployeeApplicationSystem\bin\Antlr3.Runtime.dll
+D:\-- Estudio --\Net Framework\NBH-CRUD\EmployeeApplicationSystem\bin\BusinessLogic.dll
+D:\-- Estudio --\Net Framework\NBH-CRUD\EmployeeApplicationSystem\bin\DataAccess.dll
+D:\-- Estudio --\Net Framework\NBH-CRUD\EmployeeApplicationSystem\bin\EntityFramework.dll
+D:\-- Estudio --\Net Framework\NBH-CRUD\EmployeeApplicationSystem\bin\EntityFramework.SqlServer.dll
+D:\-- Estudio --\Net Framework\NBH-CRUD\EmployeeApplicationSystem\bin\Microsoft.AI.Agent.Intercept.dll
+D:\-- Estudio --\Net Framework\NBH-CRUD\EmployeeApplicationSystem\bin\Microsoft.AI.DependencyCollector.dll
+D:\-- Estudio --\Net Framework\NBH-CRUD\EmployeeApplicationSystem\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\-- Estudio --\Net Framework\NBH-CRUD\EmployeeApplicationSystem\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\-- Estudio --\Net Framework\NBH-CRUD\EmployeeApplicationSystem\bin\Microsoft.AI.Web.dll
+D:\-- Estudio --\Net Framework\NBH-CRUD\EmployeeApplicationSystem\bin\Microsoft.AI.WindowsServer.dll
+D:\-- Estudio --\Net Framework\NBH-CRUD\EmployeeApplicationSystem\bin\Microsoft.ApplicationInsights.dll
+D:\-- Estudio --\Net Framework\NBH-CRUD\EmployeeApplicationSystem\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\-- Estudio --\Net Framework\NBH-CRUD\EmployeeApplicationSystem\bin\Microsoft.Web.Infrastructure.dll
+D:\-- Estudio --\Net Framework\NBH-CRUD\EmployeeApplicationSystem\bin\Newtonsoft.Json.dll
+D:\-- Estudio --\Net Framework\NBH-CRUD\EmployeeApplicationSystem\bin\System.Net.Http.Formatting.dll
+D:\-- Estudio --\Net Framework\NBH-CRUD\EmployeeApplicationSystem\bin\System.Web.Helpers.dll
+D:\-- Estudio --\Net Framework\NBH-CRUD\EmployeeApplicationSystem\bin\System.Web.Http.dll
+D:\-- Estudio --\Net Framework\NBH-CRUD\EmployeeApplicationSystem\bin\System.Web.Http.WebHost.dll
+D:\-- Estudio --\Net Framework\NBH-CRUD\EmployeeApplicationSystem\bin\System.Web.Mvc.dll
+D:\-- Estudio --\Net Framework\NBH-CRUD\EmployeeApplicationSystem\bin\System.Web.Optimization.dll
+D:\-- Estudio --\Net Framework\NBH-CRUD\EmployeeApplicationSystem\bin\System.Web.Razor.dll
+D:\-- Estudio --\Net Framework\NBH-CRUD\EmployeeApplicationSystem\bin\System.Web.WebPages.Deployment.dll
+D:\-- Estudio --\Net Framework\NBH-CRUD\EmployeeApplicationSystem\bin\System.Web.WebPages.dll
+D:\-- Estudio --\Net Framework\NBH-CRUD\EmployeeApplicationSystem\bin\System.Web.WebPages.Razor.dll
+D:\-- Estudio --\Net Framework\NBH-CRUD\EmployeeApplicationSystem\bin\WebGrease.dll
+D:\-- Estudio --\Net Framework\NBH-CRUD\EmployeeApplicationSystem\bin\BusinessLogic.pdb
+D:\-- Estudio --\Net Framework\NBH-CRUD\EmployeeApplicationSystem\bin\BusinessLogic.dll.config
+D:\-- Estudio --\Net Framework\NBH-CRUD\EmployeeApplicationSystem\bin\DataAccess.pdb
+D:\-- Estudio --\Net Framework\NBH-CRUD\EmployeeApplicationSystem\bin\DataAccess.dll.config
+D:\-- Estudio --\Net Framework\NBH-CRUD\EmployeeApplicationSystem\bin\EntityFramework.xml
+D:\-- Estudio --\Net Framework\NBH-CRUD\EmployeeApplicationSystem\bin\EntityFramework.SqlServer.xml
+D:\-- Estudio --\Net Framework\NBH-CRUD\EmployeeApplicationSystem\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\-- Estudio --\Net Framework\NBH-CRUD\EmployeeApplicationSystem\bin\System.Web.Helpers.xml
+D:\-- Estudio --\Net Framework\NBH-CRUD\EmployeeApplicationSystem\bin\System.Web.Mvc.xml
+D:\-- Estudio --\Net Framework\NBH-CRUD\EmployeeApplicationSystem\bin\System.Web.Optimization.xml
+D:\-- Estudio --\Net Framework\NBH-CRUD\EmployeeApplicationSystem\bin\System.Web.Razor.xml
+D:\-- Estudio --\Net Framework\NBH-CRUD\EmployeeApplicationSystem\bin\System.Web.WebPages.xml
+D:\-- Estudio --\Net Framework\NBH-CRUD\EmployeeApplicationSystem\bin\System.Web.WebPages.Deployment.xml
+D:\-- Estudio --\Net Framework\NBH-CRUD\EmployeeApplicationSystem\bin\System.Web.WebPages.Razor.xml
+D:\-- Estudio --\Net Framework\NBH-CRUD\EmployeeApplicationSystem\bin\Antlr3.Runtime.pdb
+D:\-- Estudio --\Net Framework\NBH-CRUD\EmployeeApplicationSystem\bin\Newtonsoft.Json.xml
+D:\-- Estudio --\Net Framework\NBH-CRUD\EmployeeApplicationSystem\bin\System.Net.Http.Formatting.xml
+D:\-- Estudio --\Net Framework\NBH-CRUD\EmployeeApplicationSystem\bin\System.Web.Http.xml
+D:\-- Estudio --\Net Framework\NBH-CRUD\EmployeeApplicationSystem\bin\System.Web.Http.WebHost.xml
+D:\-- Estudio --\Net Framework\NBH-CRUD\EmployeeApplicationSystem\bin\Microsoft.ApplicationInsights.xml
+D:\-- Estudio --\Net Framework\NBH-CRUD\EmployeeApplicationSystem\bin\Microsoft.AI.DependencyCollector.xml
+D:\-- Estudio --\Net Framework\NBH-CRUD\EmployeeApplicationSystem\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\-- Estudio --\Net Framework\NBH-CRUD\EmployeeApplicationSystem\bin\Microsoft.AI.WindowsServer.xml
+D:\-- Estudio --\Net Framework\NBH-CRUD\EmployeeApplicationSystem\bin\Microsoft.AI.Web.xml
+D:\-- Estudio --\Net Framework\NBH-CRUD\EmployeeApplicationSystem\obj\Debug\EmployeeApplicationSystem.csprojResolveAssemblyReference.cache
+D:\-- Estudio --\Net Framework\NBH-CRUD\EmployeeApplicationSystem\obj\Debug\EmployeeApplicationSystem.Resource.resources
+D:\-- Estudio --\Net Framework\NBH-CRUD\EmployeeApplicationSystem\obj\Debug\EmployeeApplicationSystem.Resource.es.resources
+D:\-- Estudio --\Net Framework\NBH-CRUD\EmployeeApplicationSystem\obj\Debug\EmployeeApplicationSystem.csproj.GenerateResource.Cache
+D:\-- Estudio --\Net Framework\NBH-CRUD\EmployeeApplicationSystem\obj\Debug\EmployeeApplicationSystem.csproj.CoreCompileInputs.cache
+D:\-- Estudio --\Net Framework\NBH-CRUD\EmployeeApplicationSystem\obj\Debug\es\EmployeeApplicationSystem.resources.dll
+D:\-- Estudio --\Net Framework\NBH-CRUD\EmployeeApplicationSystem\obj\Debug\EmployeeApplicationSystem.dll
+D:\-- Estudio --\Net Framework\NBH-CRUD\EmployeeApplicationSystem\obj\Debug\EmployeeApplicationSystem.pdb

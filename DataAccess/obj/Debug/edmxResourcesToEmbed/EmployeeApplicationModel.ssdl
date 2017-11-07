@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl" Alias="Self" Namespace="EmployeeApplicationNamespace.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012">
+  <EntityType Name="Applicant">
+    <Key>
+      <PropertyRef Name="ApplicantId" />
+    </Key>
+    <Property Name="ApplicantId" Nullable="false" StoreGeneratedPattern="Identity" Type="bigint" />
+    <Property Name="UserId" Type="bigint" />
+    <Property Name="MobileNumber" MaxLength="50" Type="varchar" />
+  </EntityType>
+  <EntityType Name="Application">
+    <Key>
+      <PropertyRef Name="ApplicationId" />
+    </Key>
+    <Property Name="ApplicationId" Nullable="false" StoreGeneratedPattern="Identity" Type="bigint" />
+    <Property Name="UserId" Type="bigint" />
+    <Property Name="TodayDate" Type="date" />
+    <Property Name="EmailManager" MaxLength="100" Type="varchar" />
+    <Property Name="PositionHired" MaxLength="100" Type="varchar" />
+    <Property Name="StartDate" Type="date" />
+    <Property Name="Services" MaxLength="200" Type="varchar" />
+    <Property Name="AditionalServices" MaxLength="300" Type="varchar" />
+    <Property Name="AccessLevel" MaxLength="100" Type="varchar" />
+    <Property Name="AditionalInformation" MaxLength="300" Type="varchar" />
+  </EntityType>
+  <EntityType Name="CompanyManager">
+    <Key>
+      <PropertyRef Name="CompanyManagerId" />
+    </Key>
+    <Property Name="CompanyManagerId" Nullable="false" StoreGeneratedPattern="Identity" Type="bigint" />
+    <Property Name="UserId" Type="bigint" />
+    <Property Name="CompanyName" MaxLength="100" Type="varchar" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Nullable="false" StoreGeneratedPattern="Identity" Type="bigint" />
+    <Property Name="UserName" MaxLength="50" Type="varchar" />
+    <Property Name="Password" MaxLength="50" Type="varchar" />
+    <Property Name="FirstName" MaxLength="100" Type="varchar" />
+    <Property Name="LastName" MaxLength="100" Type="varchar" />
+    <Property Name="Email" MaxLength="100" Type="varchar" />
+  </EntityType>
+  <Association Name="FK_Applicant_User">
+    <End Type="Self.User" Multiplicity="0..1" Role="User" />
+    <End Type="Self.Applicant" Multiplicity="*" Role="Applicant" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Applicant">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Application_User">
+    <End Type="Self.User" Multiplicity="0..1" Role="User" />
+    <End Type="Self.Application" Multiplicity="*" Role="Application" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Application">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CompanyManager_User">
+    <End Type="Self.User" Multiplicity="0..1" Role="User" />
+    <End Type="Self.CompanyManager" Multiplicity="*" Role="CompanyManager" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="CompanyManager">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="EmployeeApplicationNamespaceStoreContainer">
+    <EntitySet Name="Applicant" EntityType="Self.Applicant" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Application" EntityType="Self.Application" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CompanyManager" EntityType="Self.CompanyManager" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Applicant_User" Association="Self.FK_Applicant_User">
+      <End EntitySet="User" Role="User" />
+      <End EntitySet="Applicant" Role="Applicant" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Application_User" Association="Self.FK_Application_User">
+      <End EntitySet="User" Role="User" />
+      <End EntitySet="Application" Role="Application" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CompanyManager_User" Association="Self.FK_CompanyManager_User">
+      <End EntitySet="User" Role="User" />
+      <End EntitySet="CompanyManager" Role="CompanyManager" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

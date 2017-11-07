@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="EmployeeApplicationNamespaceStoreContainer" CdmEntityContainer="EmployeeApplicationConnectionString">
+    <EntitySetMapping Name="Applicants">
+      <EntityTypeMapping TypeName="EmployeeApplicationNamespace.Applicant">
+        <MappingFragment StoreEntitySet="Applicant">
+          <ScalarProperty Name="MobileNumber" ColumnName="MobileNumber" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="ApplicantId" ColumnName="ApplicantId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CompanyManagers">
+      <EntityTypeMapping TypeName="EmployeeApplicationNamespace.CompanyManager">
+        <MappingFragment StoreEntitySet="CompanyManager">
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="CompanyManagerId" ColumnName="CompanyManagerId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="EmployeeApplicationNamespace.User">
+        <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Applications">
+      <EntityTypeMapping TypeName="EmployeeApplicationNamespace.Application">
+        <MappingFragment StoreEntitySet="Application">
+          <ScalarProperty Name="AditionalInformation" ColumnName="AditionalInformation" />
+          <ScalarProperty Name="AccessLevel" ColumnName="AccessLevel" />
+          <ScalarProperty Name="AditionalServices" ColumnName="AditionalServices" />
+          <ScalarProperty Name="Services" ColumnName="Services" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="PositionHired" ColumnName="PositionHired" />
+          <ScalarProperty Name="EmailManager" ColumnName="EmailManager" />
+          <ScalarProperty Name="TodayDate" ColumnName="TodayDate" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

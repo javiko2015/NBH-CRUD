@@ -1,0 +1,28 @@
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\BusinessLogic\bin\Debug\BusinessLogic.dll.config
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\BusinessLogic\bin\Debug\BusinessLogic.dll
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\BusinessLogic\bin\Debug\BusinessLogic.pdb
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\BusinessLogic\bin\Debug\DataAccess.dll
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\BusinessLogic\bin\Debug\EntityFramework.dll
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\BusinessLogic\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\BusinessLogic\bin\Debug\DataAccess.pdb
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\BusinessLogic\bin\Debug\DataAccess.dll.config
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\BusinessLogic\bin\Debug\EntityFramework.xml
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\BusinessLogic\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\BusinessLogic\obj\Debug\BusinessLogic.csprojResolveAssemblyReference.cache
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\BusinessLogic\obj\Debug\BusinessLogic.csproj.CoreCompileInputs.cache
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\BusinessLogic\obj\Debug\BusinessLogic.dll
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\BusinessLogic\obj\Debug\BusinessLogic.pdb
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\BusinessLogic\bin\Debug\BusinessLogic.dll.config
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\BusinessLogic\bin\Debug\BusinessLogic.dll
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\BusinessLogic\bin\Debug\BusinessLogic.pdb
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\BusinessLogic\bin\Debug\DataAccess.dll
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\BusinessLogic\bin\Debug\EntityFramework.dll
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\BusinessLogic\bin\Debug\EntityFramework.SqlServer.dll
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\BusinessLogic\bin\Debug\DataAccess.pdb
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\BusinessLogic\bin\Debug\DataAccess.dll.config
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\BusinessLogic\bin\Debug\EntityFramework.xml
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\BusinessLogic\bin\Debug\EntityFramework.SqlServer.xml
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\BusinessLogic\obj\Debug\BusinessLogic.csprojResolveAssemblyReference.cache
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\BusinessLogic\obj\Debug\BusinessLogic.csproj.CoreCompileInputs.cache
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\BusinessLogic\obj\Debug\BusinessLogic.dll
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\BusinessLogic\obj\Debug\BusinessLogic.pdb

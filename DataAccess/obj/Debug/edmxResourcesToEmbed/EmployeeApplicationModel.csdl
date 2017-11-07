@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EmployeeApplicationNamespace" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="EmployeeApplicationConnectionString" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Applicants" EntityType="EmployeeApplicationNamespace.Applicant" />
+    <EntitySet Name="CompanyManagers" EntityType="EmployeeApplicationNamespace.CompanyManager" />
+    <EntitySet Name="Users" EntityType="EmployeeApplicationNamespace.User" />
+    <AssociationSet Name="FK_Applicant_User" Association="EmployeeApplicationNamespace.FK_Applicant_User">
+      <End Role="User" EntitySet="Users" />
+      <End Role="Applicant" EntitySet="Applicants" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CompanyManager_User" Association="EmployeeApplicationNamespace.FK_CompanyManager_User">
+      <End Role="User" EntitySet="Users" />
+      <End Role="CompanyManager" EntitySet="CompanyManagers" />
+    </AssociationSet>
+    <EntitySet Name="Applications" EntityType="EmployeeApplicationNamespace.Application" />
+    <AssociationSet Name="FK_Application_User" Association="EmployeeApplicationNamespace.FK_Application_User">
+      <End Role="User" EntitySet="Users" />
+      <End Role="Application" EntitySet="Applications" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Applicant">
+    <Key>
+      <PropertyRef Name="ApplicantId" />
+    </Key>
+    <Property Name="ApplicantId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="Int64" />
+    <Property Name="MobileNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="User" Relationship="EmployeeApplicationNamespace.FK_Applicant_User" FromRole="Applicant" ToRole="User" />
+  </EntityType>
+  <EntityType Name="CompanyManager">
+    <Key>
+      <PropertyRef Name="CompanyManagerId" />
+    </Key>
+    <Property Name="CompanyManagerId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="Int64" />
+    <Property Name="CompanyName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="User" Relationship="EmployeeApplicationNamespace.FK_CompanyManager_User" FromRole="CompanyManager" ToRole="User" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FirstName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="LastName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Applicants" Relationship="EmployeeApplicationNamespace.FK_Applicant_User" FromRole="User" ToRole="Applicant" />
+    <NavigationProperty Name="CompanyManagers" Relationship="EmployeeApplicationNamespace.FK_CompanyManager_User" FromRole="User" ToRole="CompanyManager" />
+    <NavigationProperty Name="Applications" Relationship="EmployeeApplicationNamespace.FK_Application_User" FromRole="User" ToRole="Application" />
+  </EntityType>
+  <Association Name="FK_Applicant_User">
+    <End Type="EmployeeApplicationNamespace.User" Role="User" Multiplicity="0..1" />
+    <End Type="EmployeeApplicationNamespace.Applicant" Role="Applicant" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Applicant">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CompanyManager_User">
+    <End Type="EmployeeApplicationNamespace.User" Role="User" Multiplicity="0..1" />
+    <End Type="EmployeeApplicationNamespace.CompanyManager" Role="CompanyManager" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="CompanyManager">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Application">
+    <Key>
+      <PropertyRef Name="ApplicationId" />
+    </Key>
+    <Property Name="ApplicationId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="Int64" />
+    <Property Name="TodayDate" Type="DateTime" Precision="0" />
+    <Property Name="EmailManager" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="PositionHired" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="StartDate" Type="DateTime" Precision="0" />
+    <Property Name="Services" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="AditionalServices" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="AccessLevel" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="AditionalInformation" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="User" Relationship="EmployeeApplicationNamespace.FK_Application_User" FromRole="Application" ToRole="User" />
+  </EntityType>
+  <Association Name="FK_Application_User">
+    <End Type="EmployeeApplicationNamespace.User" Role="User" Multiplicity="0..1" />
+    <End Type="EmployeeApplicationNamespace.Application" Role="Application" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Application">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

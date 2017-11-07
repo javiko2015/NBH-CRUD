@@ -1,0 +1,104 @@
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\EmployeeApplicationSystem.Tests\bin\Debug\ApplicationInsights.config
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\EmployeeApplicationSystem.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\EmployeeApplicationSystem.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\EmployeeApplicationSystem.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\EmployeeApplicationSystem.Tests\bin\Debug\EmployeeApplicationSystem.Tests.dll.config
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\EmployeeApplicationSystem.Tests\bin\Debug\EmployeeApplicationSystem.Tests.dll
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\EmployeeApplicationSystem.Tests\bin\Debug\EmployeeApplicationSystem.Tests.pdb
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\EmployeeApplicationSystem.Tests\bin\Debug\EmployeeApplicationSystem.dll
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\EmployeeApplicationSystem.Tests\bin\Debug\EntityFramework.dll
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\EmployeeApplicationSystem.Tests\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\EmployeeApplicationSystem.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\EmployeeApplicationSystem.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\EmployeeApplicationSystem.Tests\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\EmployeeApplicationSystem.Tests\bin\Debug\Newtonsoft.Json.dll
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\EmployeeApplicationSystem.Tests\bin\Debug\System.Web.Helpers.dll
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\EmployeeApplicationSystem.Tests\bin\Debug\System.Web.Mvc.dll
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\EmployeeApplicationSystem.Tests\bin\Debug\System.Web.Razor.dll
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\EmployeeApplicationSystem.Tests\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\EmployeeApplicationSystem.Tests\bin\Debug\System.Web.WebPages.dll
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\EmployeeApplicationSystem.Tests\bin\Debug\System.Web.WebPages.Razor.dll
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\EmployeeApplicationSystem.Tests\bin\Debug\System.Web.Optimization.dll
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\EmployeeApplicationSystem.Tests\bin\Debug\System.Web.Http.dll
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\EmployeeApplicationSystem.Tests\bin\Debug\BusinessLogic.dll
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\EmployeeApplicationSystem.Tests\bin\Debug\System.Web.Http.WebHost.dll
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\EmployeeApplicationSystem.Tests\bin\Debug\System.Net.Http.Formatting.dll
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\EmployeeApplicationSystem.Tests\bin\Debug\DataAccess.dll
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\EmployeeApplicationSystem.Tests\bin\Debug\EmployeeApplicationSystem.pdb
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\EmployeeApplicationSystem.Tests\bin\Debug\EmployeeApplicationSystem.dll.config
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\EmployeeApplicationSystem.Tests\bin\Debug\EntityFramework.xml
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\EmployeeApplicationSystem.Tests\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\EmployeeApplicationSystem.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\EmployeeApplicationSystem.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\EmployeeApplicationSystem.Tests\bin\Debug\Newtonsoft.Json.xml
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\EmployeeApplicationSystem.Tests\bin\Debug\System.Web.Helpers.xml
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\EmployeeApplicationSystem.Tests\bin\Debug\System.Web.Mvc.xml
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\EmployeeApplicationSystem.Tests\bin\Debug\System.Web.Razor.xml
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\EmployeeApplicationSystem.Tests\bin\Debug\System.Web.WebPages.xml
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\EmployeeApplicationSystem.Tests\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\EmployeeApplicationSystem.Tests\bin\Debug\System.Web.WebPages.Razor.xml
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\EmployeeApplicationSystem.Tests\bin\Debug\System.Web.Optimization.xml
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\EmployeeApplicationSystem.Tests\bin\Debug\System.Web.Http.xml
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\EmployeeApplicationSystem.Tests\bin\Debug\BusinessLogic.pdb
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\EmployeeApplicationSystem.Tests\bin\Debug\BusinessLogic.dll.config
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\EmployeeApplicationSystem.Tests\bin\Debug\System.Web.Http.WebHost.xml
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\EmployeeApplicationSystem.Tests\bin\Debug\System.Net.Http.Formatting.xml
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\EmployeeApplicationSystem.Tests\bin\Debug\DataAccess.pdb
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\EmployeeApplicationSystem.Tests\bin\Debug\DataAccess.dll.config
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\EmployeeApplicationSystem.Tests\bin\Debug\es\EmployeeApplicationSystem.resources.dll
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\EmployeeApplicationSystem.Tests\obj\Debug\EmployeeApplicationSystem.Tests.csprojResolveAssemblyReference.cache
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\EmployeeApplicationSystem.Tests\obj\Debug\EmployeeApplicationSystem.Tests.csproj.CoreCompileInputs.cache
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\EmployeeApplicationSystem.Tests\obj\Debug\EmployeeApplicationSystem.Tests.dll
+C:\Users\josea\Desktop\Javier\EmployeeApplicationSystem\EmployeeApplicationSystem.Tests\obj\Debug\EmployeeApplicationSystem.Tests.pdb
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\EmployeeApplicationSystem.Tests\bin\Debug\ApplicationInsights.config
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\EmployeeApplicationSystem.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\EmployeeApplicationSystem.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\EmployeeApplicationSystem.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\EmployeeApplicationSystem.Tests\bin\Debug\EmployeeApplicationSystem.Tests.dll.config
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\EmployeeApplicationSystem.Tests\bin\Debug\EmployeeApplicationSystem.Tests.dll
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\EmployeeApplicationSystem.Tests\bin\Debug\EmployeeApplicationSystem.Tests.pdb
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\EmployeeApplicationSystem.Tests\bin\Debug\EmployeeApplicationSystem.dll
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\EmployeeApplicationSystem.Tests\bin\Debug\EntityFramework.dll
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\EmployeeApplicationSystem.Tests\bin\Debug\EntityFramework.SqlServer.dll
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\EmployeeApplicationSystem.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\EmployeeApplicationSystem.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\EmployeeApplicationSystem.Tests\bin\Debug\Microsoft.Web.Infrastructure.dll
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\EmployeeApplicationSystem.Tests\bin\Debug\Newtonsoft.Json.dll
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\EmployeeApplicationSystem.Tests\bin\Debug\System.Web.Helpers.dll
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\EmployeeApplicationSystem.Tests\bin\Debug\System.Web.Mvc.dll
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\EmployeeApplicationSystem.Tests\bin\Debug\System.Web.Razor.dll
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\EmployeeApplicationSystem.Tests\bin\Debug\System.Web.WebPages.Deployment.dll
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\EmployeeApplicationSystem.Tests\bin\Debug\System.Web.WebPages.dll
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\EmployeeApplicationSystem.Tests\bin\Debug\System.Web.WebPages.Razor.dll
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\EmployeeApplicationSystem.Tests\bin\Debug\System.Web.Optimization.dll
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\EmployeeApplicationSystem.Tests\bin\Debug\System.Web.Http.dll
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\EmployeeApplicationSystem.Tests\bin\Debug\BusinessLogic.dll
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\EmployeeApplicationSystem.Tests\bin\Debug\DataAccess.dll
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\EmployeeApplicationSystem.Tests\bin\Debug\System.Web.Http.WebHost.dll
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\EmployeeApplicationSystem.Tests\bin\Debug\System.Net.Http.Formatting.dll
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\EmployeeApplicationSystem.Tests\bin\Debug\EmployeeApplicationSystem.pdb
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\EmployeeApplicationSystem.Tests\bin\Debug\EmployeeApplicationSystem.dll.config
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\EmployeeApplicationSystem.Tests\bin\Debug\EntityFramework.xml
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\EmployeeApplicationSystem.Tests\bin\Debug\EntityFramework.SqlServer.xml
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\EmployeeApplicationSystem.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\EmployeeApplicationSystem.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\EmployeeApplicationSystem.Tests\bin\Debug\Newtonsoft.Json.xml
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\EmployeeApplicationSystem.Tests\bin\Debug\System.Web.Helpers.xml
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\EmployeeApplicationSystem.Tests\bin\Debug\System.Web.Mvc.xml
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\EmployeeApplicationSystem.Tests\bin\Debug\System.Web.Razor.xml
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\EmployeeApplicationSystem.Tests\bin\Debug\System.Web.WebPages.xml
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\EmployeeApplicationSystem.Tests\bin\Debug\System.Web.WebPages.Deployment.xml
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\EmployeeApplicationSystem.Tests\bin\Debug\System.Web.WebPages.Razor.xml
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\EmployeeApplicationSystem.Tests\bin\Debug\System.Web.Optimization.xml
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\EmployeeApplicationSystem.Tests\bin\Debug\System.Web.Http.xml
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\EmployeeApplicationSystem.Tests\bin\Debug\BusinessLogic.pdb
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\EmployeeApplicationSystem.Tests\bin\Debug\BusinessLogic.dll.config
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\EmployeeApplicationSystem.Tests\bin\Debug\DataAccess.pdb
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\EmployeeApplicationSystem.Tests\bin\Debug\DataAccess.dll.config
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\EmployeeApplicationSystem.Tests\bin\Debug\System.Web.Http.WebHost.xml
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\EmployeeApplicationSystem.Tests\bin\Debug\System.Net.Http.Formatting.xml
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\EmployeeApplicationSystem.Tests\bin\Debug\es\EmployeeApplicationSystem.resources.dll
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\EmployeeApplicationSystem.Tests\obj\Debug\EmployeeApplicationSystem.Tests.csprojResolveAssemblyReference.cache
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\EmployeeApplicationSystem.Tests\obj\Debug\EmployeeApplicationSystem.Tests.csproj.CoreCompileInputs.cache
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\EmployeeApplicationSystem.Tests\obj\Debug\EmployeeApplicationSystem.Tests.dll
+D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\EmployeeApplicationSystem.Tests\obj\Debug\EmployeeApplicationSystem.Tests.pdb
