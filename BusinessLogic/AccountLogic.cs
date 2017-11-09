@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using DataAccess;
 using System.Security.Cryptography;
 using BusinessLogic.Enumerators;
-using System.Data.Entity.Core.Objects;
+using System.Data.Entity;
 
 namespace BusinessLogic
 {
@@ -40,7 +40,7 @@ namespace BusinessLogic
                 var counter1 = ctx.Users.Count(u => u.UserName.ToUpper().Trim() == applicant.UserName.Trim().ToUpper());
                 if (counter == 0)
                 {
-                    if (counter1==0)
+                    if (counter1 == 0)
                     {
                         var user = new User
                         {
@@ -91,9 +91,9 @@ namespace BusinessLogic
 
             using (var ctx = new EmployeeApplicationConnectionString())
             {
-                var user = ctx.Users.Include("Applicants")
-                                    .Include("CompanyManagers")
-                                    .FirstOrDefault(u => (u.UserName.Trim().ToUpper() == userName.Trim().ToUpper() && u.Password == encryptedPass)|| (u.Email.Trim().ToUpper() == userName.Trim().ToUpper() && u.Password == encryptedPass));
+                var user = ctx.Users.Include(x => x.Applicant)
+                                    .Include(x => x.CompanyManager)
+                                    .FirstOrDefault(u => (u.UserName.Trim().ToUpper() == userName.Trim().ToUpper() && u.Password == encryptedPass) || (u.Email.Trim().ToUpper() == userName.Trim().ToUpper() && u.Password == encryptedPass));
                 if (user != null)
                 {
                     result = new LoginBusinessModel
@@ -101,26 +101,21 @@ namespace BusinessLogic
                         Email = user.Email,
                         FirstName = user.FirstName,
                         LastName = user.LastName,
-                        UserName = user.UserName
+                        UserName = user.UserName, UserId=user.UserId
                     };
 
-                    if (user.Applicants != null)
+                    if (user.Applicant != null)
                     {
                         result.UserType = (int)UserTypeEnum.Applicant;
-                        if (user.Applicants.Count > 0)
-                        {
-                            result.MobileNumber = user.Applicants.ElementAt(0).MobileNumber;
-                        }
+                        result.MobileNumber = user.Applicant.MobileNumber;
+
                     }
                     else
                     {
                         result.UserType = (int)UserTypeEnum.CompanyManager;
-                        if (user.CompanyManagers != null)
+                        if (user.CompanyManager != null)
                         {
-                            if (user.CompanyManagers.Count > 0)
-                            {
-                                result.CompanyName = user.CompanyManagers.ElementAt(0).CompanyName;
-                            }
+                            result.CompanyName = user.CompanyManager.CompanyName;
                         }
                     }
                 }
@@ -129,8 +124,8 @@ namespace BusinessLogic
             return result;
         }
 
-
-       /* public List<ApplicationBusinessModel> ApplicationsList(long userid)
+       
+        internal List<ApplicationBusinessModel> ApplicationsList(long userid)
         {
 
             List<ApplicationBusinessModel> app = new List<ApplicationBusinessModel>();
@@ -139,23 +134,111 @@ namespace BusinessLogic
 
             using (var ctx = new EmployeeApplicationConnectionString())
             {
-                acces = ctx.Applications.Where(x => x.UserId == userid).ToList();
-
-
-
+                acces = ctx.Applications.Include(x => x.Applicant).Where(x => x.UserId == userid).ToList();
 
                 if (acces != null)
                 {
-                    foreach(elem )
-
-                    app = new LoginBusinessModel
+                    foreach (Application elem in acces)
                     {
-                        Email = user.Email,
-                        FirstName = user.FirstName,
-                        LastName = user.LastName,
-                        UserName = user.UserName
-                    };
+
+                        app.Add(new ApplicationBusinessModel
+                        {
+                            TodayDate = elem.TodayDate,
+
+                            EmailManager = elem.EmailManager,
+
+                            FullName = elem.Applicant.User.FirstName + elem.Applicant.User.LastName,
+
+                            PositionHired = elem.PositionHired,
+
+                            StartDate = elem.TodayDate,
+
+                            MobileNumber = elem.Applicant.MobileNumber,
+
+                            Email = elem.Applicant.User.Email,
+
+                            AdittionalInformation = elem.AditionalInformation,
+
+                            AdittionalServices = elem.AditionalServices,
+
+                            Buildings = elem.Building,
+
+                            RestrictedAccess = elem.RestrictedAccess
+
+
+                        });
+                    }
                 }
+            }
+
+            return app;
+        }
+
+
+
+        /// <summary>
+        /// Register a new applicant into the system
+        /// </summary>
+        /// <param name="applicant">Applicant general info</param>
+        public void RegisterNewApplication(ApplicationBusinessModel application)
+        {
+            using (var ctx = new EmployeeApplicationConnectionString())
+            {
+                var counter = ctx.Applications.Count(u => u.CompanyName == application.CompanyName );
+               
+                if (counter == 0)
+                    {
+                        var app = new Application
+                        {
+                            TodayDate=application.TodayDate,
+                            EmailManager = application.EmailManager,
+                            PositionHired=application.PositionHired,
+                            StartDate=application.StartDate,
+                            AditionalServices=application.AdittionalServices,
+                            AccessLevel=application.AccesLevel,
+                            AditionalInformation=application.AdittionalInformation,
+                            Building=application.Buildings,
+                            RestrictedAccess=application.RestrictedAccess,
+                            Services=application.Services,
+                            CompanyName=application.CompanyName,
+                            FullName= application.FullName,                            
+                            UserId=application.UserId
+                        };
+
+                        ctx.Applications.Add(app);
+                        ctx.SaveChanges();
+
+                    }
+                    else
+                    {
+                        throw new Exception($"Aplication for ({application.CompanyName}) Company already exists");
+                    }
+               
+            }
+        }
+
+
+        public List<PositionBusinessModel> GetListPositions()
+        {
+            List<PositionBusinessModel> result = new List<PositionBusinessModel>();
+            List<Position> list = new List<Position>();
+
+            using (var ctx = new EmployeeApplicationConnectionString())
+            {
+                 list = ctx.Positions.ToList();                
+            }
+
+            foreach (var item in list)
+            {
+                result.Add(new PositionBusinessModel
+                {
+                    PositionId = item.PositionId,
+                    PositionName = item.PositionName
+                }); 
+            }
+
+            return result;
+        }
 
 
 
@@ -163,12 +246,5 @@ namespace BusinessLogic
 
 
 
-            } 
-
-         return app;
-        }*/
-
-
-
-    }
+}
 }

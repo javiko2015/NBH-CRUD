@@ -16,15 +16,19 @@ namespace DataAccess
     {
         public long ApplicationId { get; set; }
         public Nullable<long> UserId { get; set; }
-        public Nullable<System.DateTime> TodayDate { get; set; }
+        public System.DateTime TodayDate { get; set; }
         public string EmailManager { get; set; }
         public string PositionHired { get; set; }
-        public Nullable<System.DateTime> StartDate { get; set; }
-        public string Services { get; set; }
+        public System.DateTime StartDate { get; set; }
         public string AditionalServices { get; set; }
         public string AccessLevel { get; set; }
         public string AditionalInformation { get; set; }
+        public string Building { get; set; }
+        public string RestrictedAccess { get; set; }
+        public string Services { get; set; }
+        public string CompanyName { get; set; }
+        public string FullName { get; set; }
     
-        public virtual User User { get; set; }
+        public virtual Applicant Applicant { get; set; }
     }
 }

@@ -14,8 +14,7 @@ namespace DataAccess
     
     public partial class CompanyManager
     {
-        public long CompanyManagerId { get; set; }
-        public Nullable<long> UserId { get; set; }
+        public long UserId { get; set; }
         public string CompanyName { get; set; }
     
         public virtual User User { get; set; }

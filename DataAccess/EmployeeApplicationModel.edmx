@@ -4,52 +4,70 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl" Alias="Self" Namespace="EmployeeApplicationNamespace.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012">
+    <Schema Namespace="EmployeeApplicationNamespace.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Applicant">
           <Key>
-            <PropertyRef Name="ApplicantId" />
+            <PropertyRef Name="UserId" />
           </Key>
-          <Property Name="ApplicantId" Nullable="false" StoreGeneratedPattern="Identity" Type="bigint" />
-          <Property Name="UserId" Type="bigint" />
-          <Property Name="MobileNumber" MaxLength="50" Type="varchar" />
+          <Property Name="UserId" Type="bigint" Nullable="false" />
+          <Property Name="MobileNumber" Type="varchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="Application">
           <Key>
             <PropertyRef Name="ApplicationId" />
           </Key>
-          <Property Name="ApplicationId" Nullable="false" StoreGeneratedPattern="Identity" Type="bigint" />
+          <Property Name="ApplicationId" Type="bigint" Nullable="false" />
           <Property Name="UserId" Type="bigint" />
-          <Property Name="TodayDate" Type="date" />
-          <Property Name="EmailManager" MaxLength="100" Type="varchar" />
-          <Property Name="PositionHired" MaxLength="100" Type="varchar" />
-          <Property Name="StartDate" Type="date" />
-          <Property Name="Services" MaxLength="200" Type="varchar" />
-          <Property Name="AditionalServices" MaxLength="300" Type="varchar" />
-          <Property Name="AccessLevel" MaxLength="100" Type="varchar" />
-          <Property Name="AditionalInformation" MaxLength="300" Type="varchar" />
+          <Property Name="TodayDate" Type="date" Nullable="false" />
+          <Property Name="EmailManager" Type="varchar" MaxLength="100" />
+          <Property Name="PositionHired" Type="varchar" MaxLength="100" />
+          <Property Name="StartDate" Type="date" Nullable="false" />
+          <Property Name="AditionalServices" Type="varchar" MaxLength="300" />
+          <Property Name="AccessLevel" Type="varchar" MaxLength="100" />
+          <Property Name="AditionalInformation" Type="varchar" MaxLength="300" />
+          <Property Name="Building" Type="varchar" MaxLength="100" />
+          <Property Name="RestrictedAccess" Type="varchar" MaxLength="300" />
+          <Property Name="Services" Type="varchar" MaxLength="400" />
+          <Property Name="CompanyName" Type="varchar" MaxLength="100" />
+          <Property Name="FullName" Type="varchar" MaxLength="100" />
         </EntityType>
         <EntityType Name="CompanyManager">
           <Key>
-            <PropertyRef Name="CompanyManagerId" />
+            <PropertyRef Name="UserId" />
           </Key>
-          <Property Name="CompanyManagerId" Nullable="false" StoreGeneratedPattern="Identity" Type="bigint" />
-          <Property Name="UserId" Type="bigint" />
-          <Property Name="CompanyName" MaxLength="100" Type="varchar" />
+          <Property Name="UserId" Type="bigint" Nullable="false" />
+          <Property Name="CompanyName" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="Position">
+          <Key>
+            <PropertyRef Name="PositionId" />
+          </Key>
+          <Property Name="PositionId" Type="bigint" Nullable="false" />
+          <Property Name="PositionName" Type="varchar" MaxLength="100" />
+          <Property Name="UserId" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="Service">
+          <Key>
+            <PropertyRef Name="ServiceId" />
+          </Key>
+          <Property Name="ServiceId" Type="bigint" Nullable="false" />
+          <Property Name="ServiceName" Type="varchar" MaxLength="100" />
+          <Property Name="UserId" Type="varchar" MaxLength="100" />
         </EntityType>
         <EntityType Name="User">
           <Key>
             <PropertyRef Name="UserId" />
           </Key>
-          <Property Name="UserId" Nullable="false" StoreGeneratedPattern="Identity" Type="bigint" />
-          <Property Name="UserName" MaxLength="50" Type="varchar" />
-          <Property Name="Password" MaxLength="50" Type="varchar" />
-          <Property Name="FirstName" MaxLength="100" Type="varchar" />
-          <Property Name="LastName" MaxLength="100" Type="varchar" />
-          <Property Name="Email" MaxLength="100" Type="varchar" />
+          <Property Name="UserId" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserName" Type="varchar" MaxLength="50" />
+          <Property Name="Password" Type="varchar" MaxLength="50" />
+          <Property Name="FirstName" Type="varchar" MaxLength="100" />
+          <Property Name="LastName" Type="varchar" MaxLength="100" />
+          <Property Name="Email" Type="varchar" MaxLength="100" />
         </EntityType>
         <Association Name="FK_Applicant_User">
-          <End Type="Self.User" Multiplicity="0..1" Role="User" />
-          <End Type="Self.Applicant" Multiplicity="*" Role="Applicant" />
+          <End Role="User" Type="Self.User" Multiplicity="1" />
+          <End Role="Applicant" Type="Self.Applicant" Multiplicity="0..1" />
           <ReferentialConstraint>
             <Principal Role="User">
               <PropertyRef Name="UserId" />
@@ -59,11 +77,11 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Application_User">
-          <End Type="Self.User" Multiplicity="0..1" Role="User" />
-          <End Type="Self.Application" Multiplicity="*" Role="Application" />
+        <Association Name="FK_Application_Applicant">
+          <End Role="Applicant" Type="Self.Applicant" Multiplicity="0..1" />
+          <End Role="Application" Type="Self.Application" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="User">
+            <Principal Role="Applicant">
               <PropertyRef Name="UserId" />
             </Principal>
             <Dependent Role="Application">
@@ -72,8 +90,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_CompanyManager_User">
-          <End Type="Self.User" Multiplicity="0..1" Role="User" />
-          <End Type="Self.CompanyManager" Multiplicity="*" Role="CompanyManager" />
+          <End Role="User" Type="Self.User" Multiplicity="1" />
+          <End Role="CompanyManager" Type="Self.CompanyManager" Multiplicity="0..1" />
           <ReferentialConstraint>
             <Principal Role="User">
               <PropertyRef Name="UserId" />
@@ -87,18 +105,20 @@
           <EntitySet Name="Applicant" EntityType="Self.Applicant" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Application" EntityType="Self.Application" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="CompanyManager" EntityType="Self.CompanyManager" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Position" EntityType="Self.Position" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Service" EntityType="Self.Service" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK_Applicant_User" Association="Self.FK_Applicant_User">
-            <End EntitySet="User" Role="User" />
-            <End EntitySet="Applicant" Role="Applicant" />
+            <End Role="User" EntitySet="User" />
+            <End Role="Applicant" EntitySet="Applicant" />
           </AssociationSet>
-          <AssociationSet Name="FK_Application_User" Association="Self.FK_Application_User">
-            <End EntitySet="User" Role="User" />
-            <End EntitySet="Application" Role="Application" />
+          <AssociationSet Name="FK_Application_Applicant" Association="Self.FK_Application_Applicant">
+            <End Role="Applicant" EntitySet="Applicant" />
+            <End Role="Application" EntitySet="Application" />
           </AssociationSet>
           <AssociationSet Name="FK_CompanyManager_User" Association="Self.FK_CompanyManager_User">
-            <End EntitySet="User" Role="User" />
-            <End EntitySet="CompanyManager" Role="CompanyManager" />
+            <End Role="User" EntitySet="User" />
+            <End Role="CompanyManager" EntitySet="CompanyManager" />
           </AssociationSet>
         </EntityContainer>
       </Schema></edmx:StorageModels>
@@ -107,37 +127,58 @@
       <Schema Namespace="EmployeeApplicationNamespace" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityContainer Name="EmployeeApplicationConnectionString" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Applicants" EntityType="EmployeeApplicationNamespace.Applicant" />
+          <EntitySet Name="Applications" EntityType="EmployeeApplicationNamespace.Application" />
           <EntitySet Name="CompanyManagers" EntityType="EmployeeApplicationNamespace.CompanyManager" />
           <EntitySet Name="Users" EntityType="EmployeeApplicationNamespace.User" />
           <AssociationSet Name="FK_Applicant_User" Association="EmployeeApplicationNamespace.FK_Applicant_User">
             <End Role="User" EntitySet="Users" />
             <End Role="Applicant" EntitySet="Applicants" />
           </AssociationSet>
+          <AssociationSet Name="FK_Application_Applicant" Association="EmployeeApplicationNamespace.FK_Application_Applicant">
+            <End Role="Applicant" EntitySet="Applicants" />
+            <End Role="Application" EntitySet="Applications" />
+          </AssociationSet>
           <AssociationSet Name="FK_CompanyManager_User" Association="EmployeeApplicationNamespace.FK_CompanyManager_User">
             <End Role="User" EntitySet="Users" />
             <End Role="CompanyManager" EntitySet="CompanyManagers" />
           </AssociationSet>
-          <EntitySet Name="Applications" EntityType="EmployeeApplicationNamespace.Application" />
-          <AssociationSet Name="FK_Application_User" Association="EmployeeApplicationNamespace.FK_Application_User">
-            <End Role="User" EntitySet="Users" />
-            <End Role="Application" EntitySet="Applications" />
-          </AssociationSet>
+          <EntitySet Name="Positions" EntityType="EmployeeApplicationNamespace.Position" />
+          <EntitySet Name="Services" EntityType="EmployeeApplicationNamespace.Service" />
         </EntityContainer>
         <EntityType Name="Applicant">
           <Key>
-            <PropertyRef Name="ApplicantId" />
+            <PropertyRef Name="UserId" />
           </Key>
-          <Property Name="ApplicantId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="UserId" Type="Int64" />
+          <Property Name="UserId" Type="Int64" Nullable="false" />
           <Property Name="MobileNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="User" Relationship="EmployeeApplicationNamespace.FK_Applicant_User" FromRole="Applicant" ToRole="User" />
+          <NavigationProperty Name="Applications" Relationship="EmployeeApplicationNamespace.FK_Application_Applicant" FromRole="Applicant" ToRole="Application" />
+        </EntityType>
+        <EntityType Name="Application">
+          <Key>
+            <PropertyRef Name="ApplicationId" />
+          </Key>
+          <Property Name="ApplicationId" Type="Int64" Nullable="false" />
+          <Property Name="UserId" Type="Int64" />
+          <Property Name="TodayDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="EmailManager" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="PositionHired" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="StartDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="AditionalServices" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Name="AccessLevel" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="AditionalInformation" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Name="Building" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="RestrictedAccess" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Name="Services" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+          <Property Name="CompanyName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Applicant" Relationship="EmployeeApplicationNamespace.FK_Application_Applicant" FromRole="Application" ToRole="Applicant" />
+          <Property Name="FullName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="CompanyManager">
           <Key>
-            <PropertyRef Name="CompanyManagerId" />
+            <PropertyRef Name="UserId" />
           </Key>
-          <Property Name="CompanyManagerId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="UserId" Type="Int64" />
+          <Property Name="UserId" Type="Int64" Nullable="false" />
           <Property Name="CompanyName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="User" Relationship="EmployeeApplicationNamespace.FK_CompanyManager_User" FromRole="CompanyManager" ToRole="User" />
         </EntityType>
@@ -151,13 +192,12 @@
           <Property Name="FirstName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="LastName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="Applicants" Relationship="EmployeeApplicationNamespace.FK_Applicant_User" FromRole="User" ToRole="Applicant" />
-          <NavigationProperty Name="CompanyManagers" Relationship="EmployeeApplicationNamespace.FK_CompanyManager_User" FromRole="User" ToRole="CompanyManager" />
-          <NavigationProperty Name="Applications" Relationship="EmployeeApplicationNamespace.FK_Application_User" FromRole="User" ToRole="Application" />
+          <NavigationProperty Name="Applicant" Relationship="EmployeeApplicationNamespace.FK_Applicant_User" FromRole="User" ToRole="Applicant" />
+          <NavigationProperty Name="CompanyManager" Relationship="EmployeeApplicationNamespace.FK_CompanyManager_User" FromRole="User" ToRole="CompanyManager" />
         </EntityType>
         <Association Name="FK_Applicant_User">
-          <End Type="EmployeeApplicationNamespace.User" Role="User" Multiplicity="0..1" />
-          <End Type="EmployeeApplicationNamespace.Applicant" Role="Applicant" Multiplicity="*" />
+          <End Type="EmployeeApplicationNamespace.User" Role="User" Multiplicity="1" />
+          <End Type="EmployeeApplicationNamespace.Applicant" Role="Applicant" Multiplicity="0..1" />
           <ReferentialConstraint>
             <Principal Role="User">
               <PropertyRef Name="UserId" />
@@ -167,9 +207,21 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_Application_Applicant">
+          <End Type="EmployeeApplicationNamespace.Applicant" Role="Applicant" Multiplicity="0..1" />
+          <End Type="EmployeeApplicationNamespace.Application" Role="Application" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Applicant">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="Application">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_CompanyManager_User">
-          <End Type="EmployeeApplicationNamespace.User" Role="User" Multiplicity="0..1" />
-          <End Type="EmployeeApplicationNamespace.CompanyManager" Role="CompanyManager" Multiplicity="*" />
+          <End Type="EmployeeApplicationNamespace.User" Role="User" Multiplicity="1" />
+          <End Type="EmployeeApplicationNamespace.CompanyManager" Role="CompanyManager" Multiplicity="0..1" />
           <ReferentialConstraint>
             <Principal Role="User">
               <PropertyRef Name="UserId" />
@@ -179,34 +231,22 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityType Name="Application">
+        <EntityType Name="Position">
           <Key>
-            <PropertyRef Name="ApplicationId" />
+            <PropertyRef Name="PositionId" />
           </Key>
-          <Property Name="ApplicationId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="UserId" Type="Int64" />
-          <Property Name="TodayDate" Type="DateTime" Precision="0" />
-          <Property Name="EmailManager" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="PositionHired" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="StartDate" Type="DateTime" Precision="0" />
-          <Property Name="Services" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
-          <Property Name="AditionalServices" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
-          <Property Name="AccessLevel" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="AditionalInformation" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="User" Relationship="EmployeeApplicationNamespace.FK_Application_User" FromRole="Application" ToRole="User" />
+          <Property Name="PositionId" Type="Int64" Nullable="false" />
+          <Property Name="PositionName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="UserId" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
         </EntityType>
-        <Association Name="FK_Application_User">
-          <End Type="EmployeeApplicationNamespace.User" Role="User" Multiplicity="0..1" />
-          <End Type="EmployeeApplicationNamespace.Application" Role="Application" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="User">
-              <PropertyRef Name="UserId" />
-            </Principal>
-            <Dependent Role="Application">
-              <PropertyRef Name="UserId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
+        <EntityType Name="Service">
+          <Key>
+            <PropertyRef Name="ServiceId" />
+          </Key>
+          <Property Name="ServiceId" Type="Int64" Nullable="false" />
+          <Property Name="ServiceName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="UserId" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
         </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -218,7 +258,26 @@
               <MappingFragment StoreEntitySet="Applicant">
                 <ScalarProperty Name="MobileNumber" ColumnName="MobileNumber" />
                 <ScalarProperty Name="UserId" ColumnName="UserId" />
-                <ScalarProperty Name="ApplicantId" ColumnName="ApplicantId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Applications">
+            <EntityTypeMapping TypeName="EmployeeApplicationNamespace.Application">
+              <MappingFragment StoreEntitySet="Application">
+                <ScalarProperty Name="FullName" ColumnName="FullName" />
+                <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+                <ScalarProperty Name="Services" ColumnName="Services" />
+                <ScalarProperty Name="RestrictedAccess" ColumnName="RestrictedAccess" />
+                <ScalarProperty Name="Building" ColumnName="Building" />
+                <ScalarProperty Name="AditionalInformation" ColumnName="AditionalInformation" />
+                <ScalarProperty Name="AccessLevel" ColumnName="AccessLevel" />
+                <ScalarProperty Name="AditionalServices" ColumnName="AditionalServices" />
+                <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+                <ScalarProperty Name="PositionHired" ColumnName="PositionHired" />
+                <ScalarProperty Name="EmailManager" ColumnName="EmailManager" />
+                <ScalarProperty Name="TodayDate" ColumnName="TodayDate" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -227,7 +286,6 @@
               <MappingFragment StoreEntitySet="CompanyManager">
                 <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
                 <ScalarProperty Name="UserId" ColumnName="UserId" />
-                <ScalarProperty Name="CompanyManagerId" ColumnName="CompanyManagerId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -243,19 +301,21 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Applications">
-            <EntityTypeMapping TypeName="EmployeeApplicationNamespace.Application">
-              <MappingFragment StoreEntitySet="Application">
-                <ScalarProperty Name="AditionalInformation" ColumnName="AditionalInformation" />
-                <ScalarProperty Name="AccessLevel" ColumnName="AccessLevel" />
-                <ScalarProperty Name="AditionalServices" ColumnName="AditionalServices" />
-                <ScalarProperty Name="Services" ColumnName="Services" />
-                <ScalarProperty Name="StartDate" ColumnName="StartDate" />
-                <ScalarProperty Name="PositionHired" ColumnName="PositionHired" />
-                <ScalarProperty Name="EmailManager" ColumnName="EmailManager" />
-                <ScalarProperty Name="TodayDate" ColumnName="TodayDate" />
+          <EntitySetMapping Name="Positions">
+            <EntityTypeMapping TypeName="EmployeeApplicationNamespace.Position">
+              <MappingFragment StoreEntitySet="Position">
                 <ScalarProperty Name="UserId" ColumnName="UserId" />
-                <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+                <ScalarProperty Name="PositionName" ColumnName="PositionName" />
+                <ScalarProperty Name="PositionId" ColumnName="PositionId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Services">
+            <EntityTypeMapping TypeName="EmployeeApplicationNamespace.Service">
+              <MappingFragment StoreEntitySet="Service">
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="ServiceName" ColumnName="ServiceName" />
+                <ScalarProperty Name="ServiceId" ColumnName="ServiceId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

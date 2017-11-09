@@ -21,6 +21,8 @@ namespace BusinessLogic.BusinessModels
 
         public int UserType { get; set; }
 
+        public long UserId { get; set; }
+
         public string CompanyName { get; set; }
 
         public UserTypeEnum UserTypeEnumerator

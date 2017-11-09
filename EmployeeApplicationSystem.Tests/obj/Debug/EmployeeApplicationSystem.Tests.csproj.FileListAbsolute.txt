@@ -102,3 +102,5 @@ D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\EmployeeApplicationSyst
 D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\EmployeeApplicationSystem.Tests\obj\Debug\EmployeeApplicationSystem.Tests.csproj.CoreCompileInputs.cache
 D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\EmployeeApplicationSystem.Tests\obj\Debug\EmployeeApplicationSystem.Tests.dll
 D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\EmployeeApplicationSystem.Tests\obj\Debug\EmployeeApplicationSystem.Tests.pdb
+D:\-- Estudio --\Net Framework\NBH-CRUD\EmployeeApplicationSystem.Tests\obj\Debug\EmployeeApplicationSystem.Tests.csprojResolveAssemblyReference.cache
+D:\-- Estudio --\Net Framework\NBH-CRUD\EmployeeApplicationSystem.Tests\obj\Debug\EmployeeApplicationSystem.Tests.csproj.CoreCompileInputs.cache

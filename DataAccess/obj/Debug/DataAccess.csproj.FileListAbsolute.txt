@@ -19,3 +19,14 @@ D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\DataAccess\bin\Debug\En
 D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\DataAccess\obj\Debug\DataAccess.csproj.CoreCompileInputs.cache
 D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\DataAccess\obj\Debug\DataAccess.dll
 D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\DataAccess\obj\Debug\DataAccess.pdb
+D:\-- Estudio --\Net Framework\NBH-CRUD\DataAccess\bin\Debug\DataAccess.dll.config
+D:\-- Estudio --\Net Framework\NBH-CRUD\DataAccess\bin\Debug\DataAccess.dll
+D:\-- Estudio --\Net Framework\NBH-CRUD\DataAccess\bin\Debug\DataAccess.pdb
+D:\-- Estudio --\Net Framework\NBH-CRUD\DataAccess\bin\Debug\EntityFramework.dll
+D:\-- Estudio --\Net Framework\NBH-CRUD\DataAccess\bin\Debug\EntityFramework.SqlServer.dll
+D:\-- Estudio --\Net Framework\NBH-CRUD\DataAccess\bin\Debug\EntityFramework.xml
+D:\-- Estudio --\Net Framework\NBH-CRUD\DataAccess\bin\Debug\EntityFramework.SqlServer.xml
+D:\-- Estudio --\Net Framework\NBH-CRUD\DataAccess\obj\Debug\DataAccess.csprojResolveAssemblyReference.cache
+D:\-- Estudio --\Net Framework\NBH-CRUD\DataAccess\obj\Debug\DataAccess.csproj.CoreCompileInputs.cache
+D:\-- Estudio --\Net Framework\NBH-CRUD\DataAccess\obj\Debug\DataAccess.dll
+D:\-- Estudio --\Net Framework\NBH-CRUD\DataAccess\obj\Debug\DataAccess.pdb

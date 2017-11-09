@@ -124,6 +124,11 @@ D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\EmployeeApplicationSyst
 D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\EmployeeApplicationSystem\obj\Debug\es\EmployeeApplicationSystem.resources.dll
 D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\EmployeeApplicationSystem\obj\Debug\EmployeeApplicationSystem.dll
 D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\EmployeeApplicationSystem\obj\Debug\EmployeeApplicationSystem.pdb
+D:\-- Estudio --\Net Framework\NBH-CRUD\EmployeeApplicationSystem\obj\Debug\EmployeeApplicationSystem.csprojResolveAssemblyReference.cache
+D:\-- Estudio --\Net Framework\NBH-CRUD\EmployeeApplicationSystem\obj\Debug\EmployeeApplicationSystem.Resource.resources
+D:\-- Estudio --\Net Framework\NBH-CRUD\EmployeeApplicationSystem\obj\Debug\EmployeeApplicationSystem.Resource.es.resources
+D:\-- Estudio --\Net Framework\NBH-CRUD\EmployeeApplicationSystem\obj\Debug\EmployeeApplicationSystem.csproj.GenerateResource.Cache
+D:\-- Estudio --\Net Framework\NBH-CRUD\EmployeeApplicationSystem\obj\Debug\EmployeeApplicationSystem.csproj.CoreCompileInputs.cache
 D:\-- Estudio --\Net Framework\NBH-CRUD\EmployeeApplicationSystem\bin\ApplicationInsights.config
 D:\-- Estudio --\Net Framework\NBH-CRUD\EmployeeApplicationSystem\bin\EmployeeApplicationSystem.dll.config
 D:\-- Estudio --\Net Framework\NBH-CRUD\EmployeeApplicationSystem\bin\EmployeeApplicationSystem.dll
@@ -179,11 +184,6 @@ D:\-- Estudio --\Net Framework\NBH-CRUD\EmployeeApplicationSystem\bin\Microsoft.
 D:\-- Estudio --\Net Framework\NBH-CRUD\EmployeeApplicationSystem\bin\Microsoft.AI.ServerTelemetryChannel.xml
 D:\-- Estudio --\Net Framework\NBH-CRUD\EmployeeApplicationSystem\bin\Microsoft.AI.WindowsServer.xml
 D:\-- Estudio --\Net Framework\NBH-CRUD\EmployeeApplicationSystem\bin\Microsoft.AI.Web.xml
-D:\-- Estudio --\Net Framework\NBH-CRUD\EmployeeApplicationSystem\obj\Debug\EmployeeApplicationSystem.csprojResolveAssemblyReference.cache
-D:\-- Estudio --\Net Framework\NBH-CRUD\EmployeeApplicationSystem\obj\Debug\EmployeeApplicationSystem.Resource.resources
-D:\-- Estudio --\Net Framework\NBH-CRUD\EmployeeApplicationSystem\obj\Debug\EmployeeApplicationSystem.Resource.es.resources
-D:\-- Estudio --\Net Framework\NBH-CRUD\EmployeeApplicationSystem\obj\Debug\EmployeeApplicationSystem.csproj.GenerateResource.Cache
-D:\-- Estudio --\Net Framework\NBH-CRUD\EmployeeApplicationSystem\obj\Debug\EmployeeApplicationSystem.csproj.CoreCompileInputs.cache
 D:\-- Estudio --\Net Framework\NBH-CRUD\EmployeeApplicationSystem\obj\Debug\es\EmployeeApplicationSystem.resources.dll
 D:\-- Estudio --\Net Framework\NBH-CRUD\EmployeeApplicationSystem\obj\Debug\EmployeeApplicationSystem.dll
 D:\-- Estudio --\Net Framework\NBH-CRUD\EmployeeApplicationSystem\obj\Debug\EmployeeApplicationSystem.pdb

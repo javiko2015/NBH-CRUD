@@ -61,6 +61,51 @@ namespace EmployeeApplicationSystem {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Acces Level.
+        /// </summary>
+        public static string AccesLevel {
+            get {
+                return ResourceManager.GetString("AccesLevel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Adittional Information.
+        /// </summary>
+        public static string AdittionalInformation {
+            get {
+                return ResourceManager.GetString("AdittionalInformation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Adittional Services.
+        /// </summary>
+        public static string AdittionalServices {
+            get {
+                return ResourceManager.GetString("AdittionalServices", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Buildings.
+        /// </summary>
+        public static string Buildings {
+            get {
+                return ResourceManager.GetString("Buildings", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Company Name.
+        /// </summary>
+        public static string CompanyName {
+            get {
+                return ResourceManager.GetString("CompanyName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Confirm Password.
         /// </summary>
         public static string ConfirmPassword {
@@ -75,6 +120,15 @@ namespace EmployeeApplicationSystem {
         public static string Email {
             get {
                 return ResourceManager.GetString("Email", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hiring Manager&apos;s email address .
+        /// </summary>
+        public static string EmailManager {
+            get {
+                return ResourceManager.GetString("EmailManager", resourceCulture);
             }
         }
         
@@ -102,6 +156,15 @@ namespace EmployeeApplicationSystem {
         public static string FirstName {
             get {
                 return ResourceManager.GetString("FirstName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to New Employee&apos;s Full Name.
+        /// </summary>
+        public static string FullName {
+            get {
+                return ResourceManager.GetString("FullName", resourceCulture);
             }
         }
         
@@ -160,6 +223,15 @@ namespace EmployeeApplicationSystem {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Position new employee is being hired for.
+        /// </summary>
+        public static string PositionHired {
+            get {
+                return ResourceManager.GetString("PositionHired", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Register New Applicant.
         /// </summary>
         public static string RegisterNewApplicant {
@@ -174,6 +246,42 @@ namespace EmployeeApplicationSystem {
         public static string RequiredErrorMsg {
             get {
                 return ResourceManager.GetString("RequiredErrorMsg", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Restricted Access.
+        /// </summary>
+        public static string RestrictedAccess {
+            get {
+                return ResourceManager.GetString("RestrictedAccess", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Services.
+        /// </summary>
+        public static string Services {
+            get {
+                return ResourceManager.GetString("Services", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Start Date.
+        /// </summary>
+        public static string StartDate {
+            get {
+                return ResourceManager.GetString("StartDate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Today&apos;s Date.
+        /// </summary>
+        public static string TodayDate {
+            get {
+                return ResourceManager.GetString("TodayDate", resourceCulture);
             }
         }
         

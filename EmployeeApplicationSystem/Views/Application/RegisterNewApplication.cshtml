@@ -1,0 +1,230 @@
+﻿@model EmployeeApplicationSystem.Models.InputModels.AplicationInputModel
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+
+@using (Html.BeginForm("RegisterNewApplication", "Application", FormMethod.Post, new { id = "frmRegister" }))
+{
+    @Html.AntiForgeryToken()
+
+    
+    <div class="form-horizontal">
+        <h4>Application</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        
+        
+      <div id="divStep1">
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.TodayDate, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.TodayDate, new { htmlAttributes = new { @class = "form-control", @type = "date" } })
+                    @Html.ValidationMessageFor(model => model.TodayDate, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.EmailManager, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.EmailManager, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.EmailManager, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.FullName, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.FullName, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.FullName, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.SelectedPositionHired, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                                   
+                      @foreach (var item in Model.ListPositionsHired)
+                        {
+                        <div> @Html.RadioButtonFor(s => s.SelectedPositionHired, item.PositionId, new { onclick = "OcultarValidation()" }) @item.PositionName</div>
+                        }                     
+                     <div class='PositionValidation' style="color:#ee8929;"></div>
+                 </div> 
+                 
+             </div>       
+
+             <div class="form-group">
+                @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.MobileNumber, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.MobileNumber, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.MobileNumber, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <button type="button" class="btn btn-light" onclick="MoveNextInitial()">SIGUIENTE</button>
+
+       </div>
+       
+        
+        
+      <div id="divStep2" style="display:none;">
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.StartDate, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.StartDate, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.StartDate, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Services, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Services, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Services, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.AdittionalServices, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.AdittionalServices, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.AdittionalServices, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.CompanyName, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.CompanyName, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.CompanyName, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.AccesLevel, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.AccesLevel, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.AccesLevel, "", new { @class = "text-danger" })
+                </div>
+            </div> 
+
+            <button type="button" class="btn btn-light" onclick="MoveNext()">SIGUIENTE</button>
+            <button type="button" class="btn btn-light" onclick="MoveBack()">ATRAZ</button>
+
+       </div>
+
+
+      <div id="divStep3" style="display:none;">
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.AdittionalInformation, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.AdittionalInformation, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.AdittionalInformation, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Buildings, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Buildings, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Buildings, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.RestrictedAccess, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.RestrictedAccess, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.RestrictedAccess, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <button type="button" class="btn btn-light" onclick="MoveBackFinal()">ATRAZ</button>
+            <button type="submit" class="btn btn-primary" value="Submit">SUBMIT</button>
+            <input id="btnsubmit" type="submit" value="Submit" class="btn btn-light" />
+
+        </div>
+
+
+
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+
+
+
+@section Scripts { @Scripts.Render("~/bundles/jqueryval")}
+
+
+    <script type="text/javascript">
+
+        function MoveNextInitial() {
+            $("#frmRegister").validate();
+
+            if ($("#frmRegister").valid() && $("input[name='SelectedPositionHired']:checked").length > 0)
+            {
+                $("#divStep1").hide();
+                $("#divStep2").fadeIn();
+            }
+            else {
+                $('.PositionValidation').text("Position is required.");
+            }
+        }
+
+        function OcultarValidation() {            
+            if ($("input[name='SelectedPositionHired']:checked").length > 0)
+            {
+                $('.PositionValidation').hide();
+            }
+        }
+              
+        function MoveNext() {
+            $("#frmRegister").validate();
+
+            if ($("#frmRegister").valid()) {
+                $("#divStep2").hide();
+                $("#divStep3").fadeIn();
+            }
+        }
+
+        function MoveBack(){
+
+            $("#frmRegister").validate();
+            $("#divStep2").hide();
+            $("#divStep1").fadeIn();
+
+        }
+
+        function MoveBackFinal() {
+
+            $("#frmRegister").validate();
+            $("#divStep3").hide();
+            $("#divStep2").fadeIn();
+
+        }
+
+    </script>

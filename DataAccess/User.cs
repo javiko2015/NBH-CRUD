@@ -14,14 +14,6 @@ namespace DataAccess
     
     public partial class User
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public User()
-        {
-            this.Applicants = new HashSet<Applicant>();
-            this.CompanyManagers = new HashSet<CompanyManager>();
-            this.Applications = new HashSet<Application>();
-        }
-    
         public long UserId { get; set; }
         public string UserName { get; set; }
         public string Password { get; set; }
@@ -29,11 +21,7 @@ namespace DataAccess
         public string LastName { get; set; }
         public string Email { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Applicant> Applicants { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<CompanyManager> CompanyManagers { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Application> Applications { get; set; }
+        public virtual Applicant Applicant { get; set; }
+        public virtual CompanyManager CompanyManager { get; set; }
     }
 }

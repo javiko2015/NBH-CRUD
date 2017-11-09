@@ -159,11 +159,12 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\ApplicationsController.cs" />
+    <Compile Include="Controllers\ApplicationController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\InputModels\AplicationInputModel.cs" />
     <Compile Include="Models\InputModels\ApplicantInputModel.cs" />
     <Compile Include="Models\InputModels\LoginInputModel.cs" />
     <Compile Include="Models\ViewModels\ApplicationViewModel.cs" />
@@ -226,11 +227,12 @@
     <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Account\RegisterNewApplicant.cshtml" />
     <Content Include="Views\Account\Login.cshtml" />
-    <Content Include="Views\Applications\Create.cshtml" />
-    <Content Include="Views\Applications\Delete.cshtml" />
-    <Content Include="Views\Applications\Details.cshtml" />
-    <Content Include="Views\Applications\Edit.cshtml" />
-    <Content Include="Views\Applications\Index.cshtml" />
+    <Content Include="Views\Application\Create.cshtml" />
+    <Content Include="Views\Application\Delete.cshtml" />
+    <Content Include="Views\Application\Details.cshtml" />
+    <Content Include="Views\Application\Edit.cshtml" />
+    <Content Include="Views\Application\Index.cshtml" />
+    <Content Include="Views\Application\RegisterNewApplication.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

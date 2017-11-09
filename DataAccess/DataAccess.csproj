@@ -73,7 +73,13 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>EmployeeApplicationModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Position.cs">
+      <DependentUpon>EmployeeApplicationModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service.cs">
+      <DependentUpon>EmployeeApplicationModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="User.cs">
       <DependentUpon>EmployeeApplicationModel.tt</DependentUpon>
     </Compile>

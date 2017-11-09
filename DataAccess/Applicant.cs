@@ -14,10 +14,17 @@ namespace DataAccess
     
     public partial class Applicant
     {
-        public long ApplicantId { get; set; }
-        public Nullable<long> UserId { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Applicant()
+        {
+            this.Applications = new HashSet<Application>();
+        }
+    
+        public long UserId { get; set; }
         public string MobileNumber { get; set; }
     
         public virtual User User { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Application> Applications { get; set; }
     }
 }

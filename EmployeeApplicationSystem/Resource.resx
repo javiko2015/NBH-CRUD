@@ -162,4 +162,40 @@
   <data name="UserOrPasswordIncorrect" xml:space="preserve">
     <value>User or Password incorrect</value>
   </data>
+  <data name="EmailManager" xml:space="preserve">
+    <value>Hiring Manager's email address </value>
+  </data>
+  <data name="FullName" xml:space="preserve">
+    <value>New Employee's Full Name</value>
+  </data>
+  <data name="PositionHired" xml:space="preserve">
+    <value>Position new employee is being hired for</value>
+  </data>
+  <data name="StartDate" xml:space="preserve">
+    <value>Start Date</value>
+  </data>
+  <data name="TodayDate" xml:space="preserve">
+    <value>Today's Date</value>
+  </data>
+  <data name="AdittionalInformation" xml:space="preserve">
+    <value>Adittional Information</value>
+  </data>
+  <data name="AdittionalServices" xml:space="preserve">
+    <value>Adittional Services</value>
+  </data>
+  <data name="Buildings" xml:space="preserve">
+    <value>Buildings</value>
+  </data>
+  <data name="CompanyName" xml:space="preserve">
+    <value>Company Name</value>
+  </data>
+  <data name="RestrictedAccess" xml:space="preserve">
+    <value>Restricted Access</value>
+  </data>
+  <data name="Services" xml:space="preserve">
+    <value>Services</value>
+  </data>
+  <data name="AccesLevel" xml:space="preserve">
+    <value>Acces Level</value>
+  </data>
 </root>

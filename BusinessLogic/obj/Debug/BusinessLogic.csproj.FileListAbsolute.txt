@@ -26,3 +26,17 @@ D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\BusinessLogic\obj\Debug
 D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\BusinessLogic\obj\Debug\BusinessLogic.csproj.CoreCompileInputs.cache
 D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\BusinessLogic\obj\Debug\BusinessLogic.dll
 D:\-- Estudio --\Net Framework\EmployeeApplicationSystem\BusinessLogic\obj\Debug\BusinessLogic.pdb
+D:\-- Estudio --\Net Framework\NBH-CRUD\BusinessLogic\bin\Debug\BusinessLogic.dll.config
+D:\-- Estudio --\Net Framework\NBH-CRUD\BusinessLogic\bin\Debug\BusinessLogic.dll
+D:\-- Estudio --\Net Framework\NBH-CRUD\BusinessLogic\bin\Debug\BusinessLogic.pdb
+D:\-- Estudio --\Net Framework\NBH-CRUD\BusinessLogic\bin\Debug\DataAccess.dll
+D:\-- Estudio --\Net Framework\NBH-CRUD\BusinessLogic\bin\Debug\EntityFramework.dll
+D:\-- Estudio --\Net Framework\NBH-CRUD\BusinessLogic\bin\Debug\EntityFramework.SqlServer.dll
+D:\-- Estudio --\Net Framework\NBH-CRUD\BusinessLogic\bin\Debug\DataAccess.pdb
+D:\-- Estudio --\Net Framework\NBH-CRUD\BusinessLogic\bin\Debug\DataAccess.dll.config
+D:\-- Estudio --\Net Framework\NBH-CRUD\BusinessLogic\bin\Debug\EntityFramework.xml
+D:\-- Estudio --\Net Framework\NBH-CRUD\BusinessLogic\bin\Debug\EntityFramework.SqlServer.xml
+D:\-- Estudio --\Net Framework\NBH-CRUD\BusinessLogic\obj\Debug\BusinessLogic.csprojResolveAssemblyReference.cache
+D:\-- Estudio --\Net Framework\NBH-CRUD\BusinessLogic\obj\Debug\BusinessLogic.csproj.CoreCompileInputs.cache
+D:\-- Estudio --\Net Framework\NBH-CRUD\BusinessLogic\obj\Debug\BusinessLogic.dll
+D:\-- Estudio --\Net Framework\NBH-CRUD\BusinessLogic\obj\Debug\BusinessLogic.pdb

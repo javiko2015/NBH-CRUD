@@ -22,6 +22,8 @@ namespace EmployeeApplicationSystem.Models.ViewModels
 
         public string CompanyName { get; set; }
 
+        public long UserId { get; set; }
+
         public UserTypeEnum UserTypeEnumerator
         {
             get

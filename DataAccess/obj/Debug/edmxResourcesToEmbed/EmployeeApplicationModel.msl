@@ -6,7 +6,26 @@
         <MappingFragment StoreEntitySet="Applicant">
           <ScalarProperty Name="MobileNumber" ColumnName="MobileNumber" />
           <ScalarProperty Name="UserId" ColumnName="UserId" />
-          <ScalarProperty Name="ApplicantId" ColumnName="ApplicantId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Applications">
+      <EntityTypeMapping TypeName="EmployeeApplicationNamespace.Application">
+        <MappingFragment StoreEntitySet="Application">
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="Services" ColumnName="Services" />
+          <ScalarProperty Name="RestrictedAccess" ColumnName="RestrictedAccess" />
+          <ScalarProperty Name="Building" ColumnName="Building" />
+          <ScalarProperty Name="AditionalInformation" ColumnName="AditionalInformation" />
+          <ScalarProperty Name="AccessLevel" ColumnName="AccessLevel" />
+          <ScalarProperty Name="AditionalServices" ColumnName="AditionalServices" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="PositionHired" ColumnName="PositionHired" />
+          <ScalarProperty Name="EmailManager" ColumnName="EmailManager" />
+          <ScalarProperty Name="TodayDate" ColumnName="TodayDate" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -15,7 +34,6 @@
         <MappingFragment StoreEntitySet="CompanyManager">
           <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
           <ScalarProperty Name="UserId" ColumnName="UserId" />
-          <ScalarProperty Name="CompanyManagerId" ColumnName="CompanyManagerId" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -31,19 +49,21 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Applications">
-      <EntityTypeMapping TypeName="EmployeeApplicationNamespace.Application">
-        <MappingFragment StoreEntitySet="Application">
-          <ScalarProperty Name="AditionalInformation" ColumnName="AditionalInformation" />
-          <ScalarProperty Name="AccessLevel" ColumnName="AccessLevel" />
-          <ScalarProperty Name="AditionalServices" ColumnName="AditionalServices" />
-          <ScalarProperty Name="Services" ColumnName="Services" />
-          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
-          <ScalarProperty Name="PositionHired" ColumnName="PositionHired" />
-          <ScalarProperty Name="EmailManager" ColumnName="EmailManager" />
-          <ScalarProperty Name="TodayDate" ColumnName="TodayDate" />
+    <EntitySetMapping Name="Positions">
+      <EntityTypeMapping TypeName="EmployeeApplicationNamespace.Position">
+        <MappingFragment StoreEntitySet="Position">
           <ScalarProperty Name="UserId" ColumnName="UserId" />
-          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+          <ScalarProperty Name="PositionName" ColumnName="PositionName" />
+          <ScalarProperty Name="PositionId" ColumnName="PositionId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Services">
+      <EntityTypeMapping TypeName="EmployeeApplicationNamespace.Service">
+        <MappingFragment StoreEntitySet="Service">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="ServiceName" ColumnName="ServiceName" />
+          <ScalarProperty Name="ServiceId" ColumnName="ServiceId" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

@@ -48,7 +48,7 @@ namespace EmployeeApplicationSystem.Controllers
                         Password = model.Password,
                         UserName = model.UserName
                     };
-                    
+
                     var logic = new AccountLogic();
 
                     logic.RegisterNewApplicant(bm);
@@ -64,7 +64,8 @@ namespace EmployeeApplicationSystem.Controllers
                             LastName = authenticatedUser.LastName,
                             MobileNumber = authenticatedUser.MobileNumber,
                             UserName = authenticatedUser.UserName,
-                            UserType = authenticatedUser.UserType
+                            UserType = authenticatedUser.UserType,
+                            UserId = authenticatedUser.UserId
                         };
 
                         FormsAuthentication.SetAuthCookie(JsonConvert.SerializeObject(vm), true);
@@ -88,28 +89,6 @@ namespace EmployeeApplicationSystem.Controllers
         {
             return View();
         }
-
-/*
-        [HttpPost]
-        public ActionResult ListApplications(long userid)
-        {
-            var s = new AccountLogic();
-
-            var applicationsUser = s.ApplicationsList(userid);
-
-
-
-
-
-
-
-
-            return View();
-        }*/
-
-
-
-
 
 
         public ActionResult Authenticate()
@@ -143,7 +122,8 @@ namespace EmployeeApplicationSystem.Controllers
                         LastName = authenticatedUser.LastName,
                         MobileNumber = authenticatedUser.MobileNumber,
                         UserName = authenticatedUser.UserName,
-                        UserType = authenticatedUser.UserType
+                        UserType = authenticatedUser.UserType,
+                        UserId = authenticatedUser.UserId
                     };
 
                     FormsAuthentication.SetAuthCookie(JsonConvert.SerializeObject(vm), user.RememberMe);
@@ -157,7 +137,8 @@ namespace EmployeeApplicationSystem.Controllers
             return View(user);
         }
 
-        public ActionResult Logout() {
+        public ActionResult Logout()
+        {
             FormsAuthentication.SignOut();
             return RedirectToAction("Index", "Home");
         }

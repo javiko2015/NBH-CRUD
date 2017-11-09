@@ -8,23 +8,16 @@
     @Scripts.Render("~/bundles/modernizr")
 
 
-
-
-
-    <script type="text/javascript">      
-        
+    <script type="text/javascript">        
         function ChangeLanguage() {
             var lang = $("#cmbLanguage").val();
             var url = "@Url.Action("ChangeLanguage", "Home")";
             var returnUrl = window.location;
             window.location.replace(url + "?language=" + lang + "&returnUrl=" + returnUrl);
         }
-
     </script>
-
     
     @{ 
-
         var langCookie = Request.Cookies["culture"];
         var lang = "en";
         if (langCookie != null)
@@ -36,7 +29,8 @@
         {
             user = Newtonsoft.Json.JsonConvert.DeserializeObject<EmployeeApplicationSystem.Models.ViewModels.LoginViewModel>(User.Identity.Name);
         }
-    }
+     }
+
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -63,11 +57,11 @@
                         <li>@Html.ActionLink("LogOut", "Logout", "Account")</li>
                         if (user.UserTypeEnumerator == BusinessLogic.Enumerators.UserTypeEnum.Applicant)
                         {
-                            <li>@Html.ActionLink("My job applications", "Index", "Applications")</li>
+                            <li>@Html.ActionLink("My job applications", "Index", "Application")</li>
                         }
                         else
                         {
-                            <li>@Html.ActionLink("My job applicants", "Index", "Applications")</li>
+                            <li>@Html.ActionLink("My job applicants", "Index", "Application")</li>
                         }
                     }
                     <li>@Html.ActionLink("About", "About", "Home")</li>
@@ -106,7 +100,6 @@
 
     <script src="~/Scripts/jquery.validate.min.js"></script>
     <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
-
     <script src="~/Scripts/jquery.bootstrap.wizard.js"></script>
     <script src="~/Scripts/jquery.bootstrap.wizard.min.js"></script>
     
@@ -115,9 +108,8 @@
     
     <script> 
 
-
         $(document).ready(function () {
-            $('#rootwizard').bootstrapWizard();
+            $('#rootwizard').bootstrapWizard({ 'nextSelector': '.button-next', 'previousSelector': '.button-previous' });
         });
 
 
