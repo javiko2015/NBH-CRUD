@@ -28,6 +28,7 @@ namespace EmployeeApplicationSystem.Controllers
             var logic = new AccountLogic();
 
             im.ListPositionsHired = logic.GetListPositions();
+            im.ListServices = logic.GetListServices();
 
             return View(im);
         }
@@ -40,8 +41,8 @@ namespace EmployeeApplicationSystem.Controllers
             {
                 var logic = new AccountLogic();
 
-                if (ModelState.IsValid)
-                {
+               /* if (ModelState.IsValid)
+                {*/
                     var user = Newtonsoft.Json.JsonConvert.DeserializeObject<LoginViewModel>(User.Identity.Name);
                     //do something
                     var bm = new ApplicationBusinessModel
@@ -49,7 +50,7 @@ namespace EmployeeApplicationSystem.Controllers
                         TodayDate = model.TodayDate,
                         EmailManager = model.EmailManager,
                         FullName = model.FullName,
-                        PositionHired = model.SelectedPositionHired.ToString(), //Selected radiobtn
+                        PositionHired = logic.GetPositionName(logic.GetListPositions(), model.SelectedPositionHired),   //Selected radiobtn
                         Email = model.Email,
                         MobileNumber = model.MobileNumber,
                         StartDate = model.StartDate,
@@ -58,22 +59,21 @@ namespace EmployeeApplicationSystem.Controllers
                         Buildings = model.Buildings,
                         RestrictedAccess = model.RestrictedAccess,
                         CompanyName=model.CompanyName,
-                        Services=model.Services,
-                        AccesLevel=model.AccesLevel,
+                        Services= logic.ConcatServices(model.ListServices),                    
                         UserId = user.UserId
                     };
                     
                     logic.RegisterNewApplication(bm);
-                }
+              /*  }
                 else
                 {
                     throw new Exception(Resource.FieldsNotValid);
-                }
+                }*/
 
 
                 model.ListPositionsHired = logic.GetListPositions();
 
-                return View(model);
+                return  RedirectToAction("Index");
             }
             catch (Exception ex)
             {

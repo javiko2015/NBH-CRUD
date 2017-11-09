@@ -21,7 +21,6 @@ namespace DataAccess
         public string PositionHired { get; set; }
         public System.DateTime StartDate { get; set; }
         public string AditionalServices { get; set; }
-        public string AccessLevel { get; set; }
         public string AditionalInformation { get; set; }
         public string Building { get; set; }
         public string RestrictedAccess { get; set; }

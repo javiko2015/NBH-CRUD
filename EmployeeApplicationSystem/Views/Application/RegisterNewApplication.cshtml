@@ -9,13 +9,15 @@
 
 @using (Html.BeginForm("RegisterNewApplication", "Application", FormMethod.Post, new { id = "frmRegister" }))
 {
-    @Html.AntiForgeryToken()
-
+  @Html.AntiForgeryToken()
     
-    <div class="form-horizontal">
+  <div class="form-horizontal">
+        
         <h4>Application</h4>
         <hr />
-        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+
+      @Html.ValidationSummary(true, "", new { @class = "text-danger" })
 
         
         
@@ -75,30 +77,74 @@
                 </div>
             </div>
 
+            <div class="form-group">
+                @Html.LabelFor(model => model.StartDate, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                  @Html.EditorFor(model => model.StartDate, new { htmlAttributes = new { @class = "form-control" } })
+                  @Html.ValidationMessageFor(model => model.StartDate, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
             <button type="button" class="btn btn-light" onclick="MoveNextInitial()">SIGUIENTE</button>
 
        </div>
        
         
+
+
+
+
+
+
+
+
+
+
         
-      <div id="divStep2" style="display:none;">
-
-            <div class="form-group">
-                @Html.LabelFor(model => model.StartDate, htmlAttributes: new { @class = "control-label col-md-2" })
+      <div id="divStep2" style="display:none;"> 
+       <div class="form-group">
+                
+           
+           
+           
+           
+           @Html.LabelFor(model => model.Services, htmlAttributes: new { @class = "control-label col-md-2" })
+                
+           
                 <div class="col-md-10">
-                    @Html.EditorFor(model => model.StartDate, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.StartDate, "", new { @class = "text-danger" })
+                   
+
+
+                    <table>
+                        @for (int i = 0; i < Model.ListServices.Count; i++)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.HiddenFor(x => Model.ListServices[i].ServiceId)
+                                    @Html.CheckBoxFor(x => Model.ListServices[i].IsSelected)
+                                    @Html.DisplayFor(x => Model.ListServices[i].ServiceName)
+                                    @Html.HiddenFor(x => Model.ListServices[i].ServiceName)
+                                </td>
+                            </tr>
+                        }
+                    </table>
+
+
+
+
+                  
                 </div>
+
+
+
             </div>
 
 
-            <div class="form-group">
-                @Html.LabelFor(model => model.Services, htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.EditorFor(model => model.Services, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.Services, "", new { @class = "text-danger" })
-                </div>
-            </div>
+
+
+
+
+
 
 
             <div class="form-group">
@@ -107,9 +153,23 @@
                     @Html.EditorFor(model => model.AdittionalServices, new { htmlAttributes = new { @class = "form-control" } })
                     @Html.ValidationMessageFor(model => model.AdittionalServices, "", new { @class = "text-danger" })
                 </div>
-            </div>
+            </div>  
+            <button type="button" class="btn btn-light" onclick="MoveNext()">SIGUIENTE</button>
+            <button type="button" class="btn btn-light" onclick="MoveBack()">ATRAZ</button>
+       </div>
 
 
+
+
+
+
+
+
+
+
+
+
+        <div id="divStep3" style="display:none;">
             <div class="form-group">
                 @Html.LabelFor(model => model.CompanyName, htmlAttributes: new { @class = "control-label col-md-2" })
                 <div class="col-md-10">
@@ -119,37 +179,25 @@
             </div>
 
             <div class="form-group">
-                @Html.LabelFor(model => model.AccesLevel, htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.EditorFor(model => model.AccesLevel, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.AccesLevel, "", new { @class = "text-danger" })
-                </div>
-            </div> 
-
-            <button type="button" class="btn btn-light" onclick="MoveNext()">SIGUIENTE</button>
-            <button type="button" class="btn btn-light" onclick="MoveBack()">ATRAZ</button>
-
-       </div>
-
-
-      <div id="divStep3" style="display:none;">
-
-            <div class="form-group">
                 @Html.LabelFor(model => model.AdittionalInformation, htmlAttributes: new { @class = "control-label col-md-2" })
                 <div class="col-md-10">
                     @Html.EditorFor(model => model.AdittionalInformation, new { htmlAttributes = new { @class = "form-control" } })
                     @Html.ValidationMessageFor(model => model.AdittionalInformation, "", new { @class = "text-danger" })
                 </div>
             </div>
+            <button type="button" class="btn btn-light" onclick="MoveNext2()">SIGUIENTE</button>
+            <button type="button" class="btn btn-light" onclick="MoveBack2()">ATRAZ</button>
+        </div>
 
+
+        <div id="divStep4" style="display:none;">
             <div class="form-group">
                 @Html.LabelFor(model => model.Buildings, htmlAttributes: new { @class = "control-label col-md-2" })
                 <div class="col-md-10">
                     @Html.EditorFor(model => model.Buildings, new { htmlAttributes = new { @class = "form-control" } })
                     @Html.ValidationMessageFor(model => model.Buildings, "", new { @class = "text-danger" })
                 </div>
-            </div>
-
+            </div>          
 
             <div class="form-group">
                 @Html.LabelFor(model => model.RestrictedAccess, htmlAttributes: new { @class = "control-label col-md-2" })
@@ -158,21 +206,14 @@
                     @Html.ValidationMessageFor(model => model.RestrictedAccess, "", new { @class = "text-danger" })
                 </div>
             </div>
-
-            <button type="button" class="btn btn-light" onclick="MoveBackFinal()">ATRAZ</button>
-            <button type="submit" class="btn btn-primary" value="Submit">SUBMIT</button>
-            <input id="btnsubmit" type="submit" value="Submit" class="btn btn-light" />
-
+             <button type="button" class="btn btn-light" onclick="MoveBackFinal()">ATRAZ</button>
+             <button type="submit" class="btn btn-primary" value="Submit">SUBMIT</button>
         </div>
 
-
-
-    </div>
+  </div>
 }
 
-<div>
-    @Html.ActionLink("Back to List", "Index")
-</div>
+<div style="text-align :center">@Html.ActionLink("Back to List", "Index")</div>
 
 
 
@@ -181,6 +222,8 @@
 
 
     <script type="text/javascript">
+
+     // *** Validatons *** 
 
         function MoveNextInitial() {
             $("#frmRegister").validate();
@@ -193,14 +236,7 @@
             else {
                 $('.PositionValidation').text("Position is required.");
             }
-        }
-
-        function OcultarValidation() {            
-            if ($("input[name='SelectedPositionHired']:checked").length > 0)
-            {
-                $('.PositionValidation').hide();
-            }
-        }
+        }       
               
         function MoveNext() {
             $("#frmRegister").validate();
@@ -211,20 +247,44 @@
             }
         }
 
+        function MoveNext2() {
+            $("#frmRegister").validate();
+
+            if ($("#frmRegister").valid()) {
+                $("#divStep3").hide();
+                $("#divStep4").fadeIn();
+            }
+        }
+
         function MoveBack(){
 
             $("#frmRegister").validate();
             $("#divStep2").hide();
             $("#divStep1").fadeIn();
+        }
 
+        function MoveBack2() {
+
+            $("#frmRegister").validate();
+            $("#divStep3").hide();
+            $("#divStep2").fadeIn();
         }
 
         function MoveBackFinal() {
 
             $("#frmRegister").validate();
-            $("#divStep3").hide();
-            $("#divStep2").fadeIn();
-
+            $("#divStep4").hide();
+            $("#divStep3").fadeIn();
         }
+
+
+
+        function OcultarValidation() {
+            if ($("input[name='SelectedPositionHired']:checked").length > 0) {
+                $('.PositionValidation').hide();
+            }
+        }
+
+
 
     </script>

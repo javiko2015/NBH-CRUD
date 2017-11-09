@@ -28,9 +28,7 @@ namespace BusinessLogic.BusinessModels
 
         public string Buildings { get; set; }
 
-        public string RestrictedAccess { get; set; }
-
-        public string AccesLevel { get; set; }
+        public string RestrictedAccess { get; set; }      
 
         public string CompanyName { get; set; }
 

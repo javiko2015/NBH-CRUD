@@ -167,7 +167,6 @@
     <Compile Include="Models\InputModels\AplicationInputModel.cs" />
     <Compile Include="Models\InputModels\ApplicantInputModel.cs" />
     <Compile Include="Models\InputModels\LoginInputModel.cs" />
-    <Compile Include="Models\ViewModels\ApplicationViewModel.cs" />
     <Compile Include="Models\ViewModels\LoginViewModel.cs" />
     <Compile Include="MultilanguageManager.cs" />
     <Compile Include="MyBaseController.cs" />

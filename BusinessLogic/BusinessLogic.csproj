@@ -51,6 +51,7 @@
     <Compile Include="BusinessModels\ApplicationBusinessModel.cs" />
     <Compile Include="BusinessModels\LoginBusinessModel.cs" />
     <Compile Include="BusinessModels\PositionBusinessModel.cs" />
+    <Compile Include="BusinessModels\ServicesBusinessModel.cs" />
     <Compile Include="Enumerators\Enums.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="AccountLogic.cs" />

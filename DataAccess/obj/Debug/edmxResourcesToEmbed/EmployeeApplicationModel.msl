@@ -18,7 +18,6 @@
           <ScalarProperty Name="RestrictedAccess" ColumnName="RestrictedAccess" />
           <ScalarProperty Name="Building" ColumnName="Building" />
           <ScalarProperty Name="AditionalInformation" ColumnName="AditionalInformation" />
-          <ScalarProperty Name="AccessLevel" ColumnName="AccessLevel" />
           <ScalarProperty Name="AditionalServices" ColumnName="AditionalServices" />
           <ScalarProperty Name="StartDate" ColumnName="StartDate" />
           <ScalarProperty Name="PositionHired" ColumnName="PositionHired" />

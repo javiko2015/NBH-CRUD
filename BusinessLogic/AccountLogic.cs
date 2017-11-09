@@ -124,8 +124,13 @@ namespace BusinessLogic
             return result;
         }
 
-       
-        internal List<ApplicationBusinessModel> ApplicationsList(long userid)
+
+        /// <summary>
+        /// Get applications from the system
+        /// </summary>
+        /// <param name="applicant">Get Applications for one Applicant</param>
+        /// 
+        public List<ApplicationBusinessModel> ApplicationsList(long userid)
         {
 
             List<ApplicationBusinessModel> app = new List<ApplicationBusinessModel>();
@@ -177,9 +182,9 @@ namespace BusinessLogic
 
 
         /// <summary>
-        /// Register a new applicant into the system
+        /// Register a new application into the system
         /// </summary>
-        /// <param name="applicant">Applicant general info</param>
+        /// <param name="applicant">Application general info</param>
         public void RegisterNewApplication(ApplicationBusinessModel application)
         {
             using (var ctx = new EmployeeApplicationConnectionString())
@@ -194,8 +199,7 @@ namespace BusinessLogic
                             EmailManager = application.EmailManager,
                             PositionHired=application.PositionHired,
                             StartDate=application.StartDate,
-                            AditionalServices=application.AdittionalServices,
-                            AccessLevel=application.AccesLevel,
+                            AditionalServices=application.AdittionalServices,                           
                             AditionalInformation=application.AdittionalInformation,
                             Building=application.Buildings,
                             RestrictedAccess=application.RestrictedAccess,
@@ -217,7 +221,10 @@ namespace BusinessLogic
             }
         }
 
-
+        /// <summary>
+        /// Get List position new employee is being hired for 
+        /// </summary>
+        /// <returns></returns>
         public List<PositionBusinessModel> GetListPositions()
         {
             List<PositionBusinessModel> result = new List<PositionBusinessModel>();
@@ -236,15 +243,68 @@ namespace BusinessLogic
                     PositionName = item.PositionName
                 }); 
             }
-
             return result;
         }
 
 
+        /// <summary>
+        /// Get List position new employee is being hired for 
+        /// </summary>
+        /// <param name="list">Lista de posiciones</param>
+        /// <param name="list">Id de la posicion</param>
+        /// <returns></returns>
+        public string GetPositionName(List<PositionBusinessModel> list, int? Id)
+        {
+            var result = list.Find(p => p.PositionId == Id);
+            return result.PositionName;
+        }
 
 
+        /// <summary>
+        /// Get List Services & Equipment Needed
+        /// </summary>
+        /// <returns></returns>
+        public List<ServicesBusinessModel> GetListServices()
+        {
+            List<ServicesBusinessModel> result = new List<ServicesBusinessModel>();
+            List<Service> list = new List<Service>();
+
+            using (var ctx = new EmployeeApplicationConnectionString())
+            {
+                list = ctx.Services.ToList();
+            }
+
+            foreach (var item in list)
+            {
+                result.Add(new ServicesBusinessModel
+                {
+                    ServiceId = item.ServiceId,
+                    ServiceName = item.ServiceName,
+                    IsSelected = false
+                });
+            }
+            return result;
+        }
 
 
+        /// <summary>
+        /// Concat Values to String. Only seleted services
+        /// </summary>
+        /// <returns></returns>
+        public string ConcatServices(List<ServicesBusinessModel> list)
+        {           
+            StringBuilder concatenatedString = new StringBuilder();
 
-}
+            foreach (ServicesBusinessModel service in list)
+            {
+                if (service.IsSelected==true)
+                {
+                    concatenatedString.Append(service.ServiceName+",");
+                }          
+
+            }
+            return concatenatedString.ToString();
+        }
+
+    }
 }

@@ -23,7 +23,6 @@
           <Property Name="PositionHired" Type="varchar" MaxLength="100" />
           <Property Name="StartDate" Type="date" Nullable="false" />
           <Property Name="AditionalServices" Type="varchar" MaxLength="300" />
-          <Property Name="AccessLevel" Type="varchar" MaxLength="100" />
           <Property Name="AditionalInformation" Type="varchar" MaxLength="300" />
           <Property Name="Building" Type="varchar" MaxLength="100" />
           <Property Name="RestrictedAccess" Type="varchar" MaxLength="300" />
@@ -165,7 +164,6 @@
           <Property Name="PositionHired" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="StartDate" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="AditionalServices" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
-          <Property Name="AccessLevel" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="AditionalInformation" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
           <Property Name="Building" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="RestrictedAccess" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
@@ -270,7 +268,6 @@
                 <ScalarProperty Name="RestrictedAccess" ColumnName="RestrictedAccess" />
                 <ScalarProperty Name="Building" ColumnName="Building" />
                 <ScalarProperty Name="AditionalInformation" ColumnName="AditionalInformation" />
-                <ScalarProperty Name="AccessLevel" ColumnName="AccessLevel" />
                 <ScalarProperty Name="AditionalServices" ColumnName="AditionalServices" />
                 <ScalarProperty Name="StartDate" ColumnName="StartDate" />
                 <ScalarProperty Name="PositionHired" ColumnName="PositionHired" />

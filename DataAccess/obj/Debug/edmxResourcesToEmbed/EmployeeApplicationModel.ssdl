@@ -18,7 +18,6 @@
     <Property Name="PositionHired" Type="varchar" MaxLength="100" />
     <Property Name="StartDate" Type="date" Nullable="false" />
     <Property Name="AditionalServices" Type="varchar" MaxLength="300" />
-    <Property Name="AccessLevel" Type="varchar" MaxLength="100" />
     <Property Name="AditionalInformation" Type="varchar" MaxLength="300" />
     <Property Name="Building" Type="varchar" MaxLength="100" />
     <Property Name="RestrictedAccess" Type="varchar" MaxLength="300" />

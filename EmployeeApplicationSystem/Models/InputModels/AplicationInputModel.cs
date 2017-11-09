@@ -11,9 +11,6 @@ namespace EmployeeApplicationSystem.Models.InputModels
 {
     public class AplicationInputModel
     {
-
-
-
         
         [Display(Name = "TodayDate", ResourceType = typeof(Resource))]       
         [Required(ErrorMessageResourceType = typeof(Resource), ErrorMessageResourceName = "RequiredErrorMsg")]
@@ -85,17 +82,13 @@ namespace EmployeeApplicationSystem.Models.InputModels
         [Required(ErrorMessageResourceType = typeof(Resource), ErrorMessageResourceName = "RequiredErrorMsg")]
         public string RestrictedAccess { get; set; }
 
-        [Display(Name = "AccesLevel", ResourceType = typeof(Resource))]
-        [StringLength(100, ErrorMessageResourceType = typeof(Resource), ErrorMessageResourceName = "LengthError")]
-        [Required(ErrorMessageResourceType = typeof(Resource), ErrorMessageResourceName = "RequiredErrorMsg")]
-        public string AccesLevel { get; set; }
-
-
         [Display(Name = "PositionHired", ResourceType = typeof(Resource))]
         [Required]
         public int? SelectedPositionHired { set; get; }
 
         public List<PositionBusinessModel> ListPositionsHired { set; get; }
+
+        public List<ServicesBusinessModel> ListServices { set; get; }
 
 
 
