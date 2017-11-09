@@ -27,9 +27,11 @@ namespace DataAccess
     
         public virtual DbSet<Applicant> Applicants { get; set; }
         public virtual DbSet<Application> Applications { get; set; }
+        public virtual DbSet<Build> Builds { get; set; }
+        public virtual DbSet<Company> Companies { get; set; }
         public virtual DbSet<CompanyManager> CompanyManagers { get; set; }
-        public virtual DbSet<User> Users { get; set; }
         public virtual DbSet<Position> Positions { get; set; }
         public virtual DbSet<Service> Services { get; set; }
+        public virtual DbSet<User> Users { get; set; }
     }
 }

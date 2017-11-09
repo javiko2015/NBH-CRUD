@@ -16,6 +16,6 @@ namespace DataAccess
     {
         public long ServiceId { get; set; }
         public string ServiceName { get; set; }
-        public string UserId { get; set; }
+        public Nullable<long> UserId { get; set; }
     }
 }

@@ -1,81 +1,55 @@
-﻿@model IEnumerable<DataAccess.Application>
+﻿@model IEnumerable<BusinessLogic.BusinessModels.ApplicationBusinessModel>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "My Applications";
 }
-
-<h2>Index</h2>
+<br /><br />
+<h2>My Applications</h2> <br /><br /><br />
 
 <p>
     @Html.ActionLink("Create New", "RegisterNewApplication")
 </p>
 <table class="table">
     <tr>
+
         <th>
-            @Html.DisplayNameFor(model => model.TodayDate)
+            @Html.DisplayNameFor(model => model.ApplicationID)
         </th>
+
         <th>
-            @Html.DisplayNameFor(model => model.EmailManager)
+            @Html.DisplayNameFor(model => model.CompanyName)
         </th>
+
         <th>
             @Html.DisplayNameFor(model => model.PositionHired)
         </th>
+
         <th>
-            @Html.DisplayNameFor(model => model.StartDate)
+            @Html.DisplayNameFor(model => model.TodayDate)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.AditionalServices)
-        </th>
-       
-        <th>
-            @Html.DisplayNameFor(model => model.AditionalInformation)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Building)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.RestrictedAccess)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Applicant.MobileNumber)
-        </th>
+
+     
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
+@foreach (var item in Model.AsEnumerable()) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.TodayDate)
+            @Html.DisplayFor(modelItem => item.ApplicationID)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.EmailManager)
+            @Html.DisplayFor(modelItem => item.CompanyName)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.PositionHired)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.StartDate)
+            @Html.DisplayFor(modelItem => item.TodayDate)
         </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.AditionalServices)
-        </td>
-       
-        <td>
-            @Html.DisplayFor(modelItem => item.AditionalInformation)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Building)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.RestrictedAccess)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Applicant.MobileNumber)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ApplicationId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ApplicationId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ApplicationId })
+            
+        <td>          
+            @Html.ActionLink("Details", "Details", new { id=item.ApplicationID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ApplicationID })
         </td>
     </tr>
 }

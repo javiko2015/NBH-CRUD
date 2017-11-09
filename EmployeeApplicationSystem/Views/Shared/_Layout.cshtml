@@ -41,10 +41,11 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Application System", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
+
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     @if (!Request.IsAuthenticated)
                     {
@@ -53,7 +54,7 @@
                     }
                     else
                     {
-                        <li><a>@Resource.Hello: @user.FirstName</a></li>
+                        <li><a>@Resource.User: @user.FirstName</a></li>
                         <li>@Html.ActionLink("LogOut", "Logout", "Account")</li>
                         if (user.UserTypeEnumerator == BusinessLogic.Enumerators.UserTypeEnum.Applicant)
                         {
@@ -64,8 +65,7 @@
                             <li>@Html.ActionLink("My job applicants", "Index", "Application")</li>
                         }
                     }
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                  
                     <li>
                         <form class="navbar-form navbar-right" role="search">
                             <div class="form-group">

@@ -11,7 +11,7 @@
     <Key>
       <PropertyRef Name="ApplicationId" />
     </Key>
-    <Property Name="ApplicationId" Type="bigint" Nullable="false" />
+    <Property Name="ApplicationId" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="UserId" Type="bigint" />
     <Property Name="TodayDate" Type="date" Nullable="false" />
     <Property Name="EmailManager" Type="varchar" MaxLength="100" />
@@ -24,6 +24,22 @@
     <Property Name="Services" Type="varchar" MaxLength="400" />
     <Property Name="CompanyName" Type="varchar" MaxLength="100" />
     <Property Name="FullName" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Build">
+    <Key>
+      <PropertyRef Name="BuildId" />
+    </Key>
+    <Property Name="BuildId" Type="bigint" Nullable="false" />
+    <Property Name="BuildName" Type="varchar" MaxLength="100" />
+    <Property Name="UseriId" Type="bigint" />
+  </EntityType>
+  <EntityType Name="Company">
+    <Key>
+      <PropertyRef Name="CompanyId" />
+    </Key>
+    <Property Name="CompanyId" Type="bigint" Nullable="false" />
+    <Property Name="CompanyName" Type="varchar" MaxLength="200" />
+    <Property Name="UserId" Type="bigint" />
   </EntityType>
   <EntityType Name="CompanyManager">
     <Key>
@@ -38,7 +54,7 @@
     </Key>
     <Property Name="PositionId" Type="bigint" Nullable="false" />
     <Property Name="PositionName" Type="varchar" MaxLength="100" />
-    <Property Name="UserId" Type="varchar" MaxLength="100" />
+    <Property Name="UserId" Type="bigint" />
   </EntityType>
   <EntityType Name="Service">
     <Key>
@@ -46,7 +62,7 @@
     </Key>
     <Property Name="ServiceId" Type="bigint" Nullable="false" />
     <Property Name="ServiceName" Type="varchar" MaxLength="100" />
-    <Property Name="UserId" Type="varchar" MaxLength="100" />
+    <Property Name="UserId" Type="bigint" />
   </EntityType>
   <EntityType Name="User">
     <Key>
@@ -98,6 +114,8 @@
   <EntityContainer Name="EmployeeApplicationNamespaceStoreContainer">
     <EntitySet Name="Applicant" EntityType="Self.Applicant" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Application" EntityType="Self.Application" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Build" EntityType="Self.Build" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Company" EntityType="Self.Company" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="CompanyManager" EntityType="Self.CompanyManager" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Position" EntityType="Self.Position" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Service" EntityType="Self.Service" Schema="dbo" store:Type="Tables" />

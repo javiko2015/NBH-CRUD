@@ -17,10 +17,9 @@ namespace EmployeeApplicationSystem.Controllers
 {
     [Authorize]
     public class ApplicationController : MyBaseController
-    {
-        private EmployeeApplicationConnectionString db = new EmployeeApplicationConnectionString();
+    {      
 
-
+        // GET: Register new application
         [HttpGet]
         public ActionResult RegisterNewApplication()
         {
@@ -29,11 +28,13 @@ namespace EmployeeApplicationSystem.Controllers
 
             im.ListPositionsHired = logic.GetListPositions();
             im.ListServices = logic.GetListServices();
+            im.ListCompanies = logic.GetListCompanies();
+            im.ListBuilds = logic.GetBuilds();
 
             return View(im);
         }
-        
 
+        // POST: Register new application
         [HttpPost]
         public ActionResult RegisterNewApplication(AplicationInputModel model)
         {
@@ -41,8 +42,6 @@ namespace EmployeeApplicationSystem.Controllers
             {
                 var logic = new AccountLogic();
 
-               /* if (ModelState.IsValid)
-                {*/
                     var user = Newtonsoft.Json.JsonConvert.DeserializeObject<LoginViewModel>(User.Identity.Name);
                     //do something
                     var bm = new ApplicationBusinessModel
@@ -50,29 +49,20 @@ namespace EmployeeApplicationSystem.Controllers
                         TodayDate = model.TodayDate,
                         EmailManager = model.EmailManager,
                         FullName = model.FullName,
-                        PositionHired = logic.GetPositionName(logic.GetListPositions(), model.SelectedPositionHired),   //Selected radiobtn
+                        PositionHired = logic.GetPositionName(logic.GetListPositions(), model.SelectedPositionHired), 
                         Email = model.Email,
                         MobileNumber = model.MobileNumber,
                         StartDate = model.StartDate,
                         AdittionalServices = model.AdittionalServices,
                         AdittionalInformation = model.AdittionalInformation,
-                        Buildings = model.Buildings,
+                        Buildings = logic.ConcatBuilds(model.ListBuilds),
                         RestrictedAccess = model.RestrictedAccess,
-                        CompanyName=model.CompanyName,
-                        Services= logic.ConcatServices(model.ListServices),                    
+                        CompanyName= logic.GetCompanyName(logic.GetListCompanies(), model.SelectedCompany),
+                        Services = logic.ConcatServices(model.ListServices),                    
                         UserId = user.UserId
                     };
                     
-                    logic.RegisterNewApplication(bm);
-              /*  }
-                else
-                {
-                    throw new Exception(Resource.FieldsNotValid);
-                }*/
-
-
                 model.ListPositionsHired = logic.GetListPositions();
-
                 return  RedirectToAction("Index");
             }
             catch (Exception ex)
@@ -81,74 +71,46 @@ namespace EmployeeApplicationSystem.Controllers
             }
 
             return View(model);
-        }
+        }        
 
-        
-
-        // GET: Application
+        // GET: List applications
         public ActionResult Index()
         {
-            var applications = db.Applications.Include(a => a.Applicant);
-            return View(applications.ToList());
+            var user = Newtonsoft.Json.JsonConvert.DeserializeObject<LoginViewModel>(User.Identity.Name);
+            var logic = new AccountLogic();
+            List<ApplicationBusinessModel> aplications = new List<ApplicationBusinessModel>();
+            aplications = logic.ApplicationsList(user.UserId);
+
+            return View(aplications.AsEnumerable());
         }
 
-        // GET: Application/Details/5
+        // GET:  Details application
         public ActionResult Details(long? id)
         {
+            var logic = new AccountLogic();
+
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Application application = db.Applications.Find(id);
+            ApplicationBusinessModel application = logic.GetOneApplication(id);
             if (application == null)
             {
                 return HttpNotFound();
             }
             return View(application);
-        }
+        }            
 
-      
-        // GET: Application/Edit/5
-        public ActionResult Edit(long? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Application application = db.Applications.Find(id);
-            if (application == null)
-            {
-                return HttpNotFound();
-            }
-            ViewBag.UserId = new SelectList(db.Applicants, "UserId", "MobileNumber", application.UserId);
-            return View(application);
-        }
-
-        // POST: Application/Edit/5
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ApplicationId,UserId,TodayDate,EmailManager,PositionHired,StartDate,AditionalServices,AccessLevel,AditionalInformation,Building,RestrictedAccess")] Application application)
-        {
-            if (ModelState.IsValid)
-            {
-                db.Entry(application).State = EntityState.Modified;
-                db.SaveChanges();
-                return RedirectToAction("Index");
-            }
-            ViewBag.UserId = new SelectList(db.Applicants, "UserId", "MobileNumber", application.UserId);
-            return View(application);
-        }
-
-        // GET: Application/Delete/5
+        // GET: Delete application
         public ActionResult Delete(long? id)
         {
+            var logic = new AccountLogic();
+
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Application application = db.Applications.Find(id);
+            ApplicationBusinessModel application = logic.GetOneApplication(id);
             if (application == null)
             {
                 return HttpNotFound();
@@ -156,24 +118,25 @@ namespace EmployeeApplicationSystem.Controllers
             return View(application);
         }
 
-        // POST: Application/Delete/5
+        // POST:  Delete application
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(long id)
         {
-            Application application = db.Applications.Find(id);
-            db.Applications.Remove(application);
-            db.SaveChanges();
+            var logic = new AccountLogic();
+            ApplicationBusinessModel application = logic.GetOneApplication(id);
+            logic.DeleteApplication(application);
+          
             return RedirectToAction("Index");
         }
 
-        protected override void Dispose(bool disposing)
+       /* protected override void Dispose(bool disposing)
         {
             if (disposing)
             {
                 db.Dispose();
             }
             base.Dispose(disposing);
-        }
+        }*/
     }
 }

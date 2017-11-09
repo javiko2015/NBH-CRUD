@@ -145,7 +145,6 @@ namespace BusinessLogic
                 {
                     foreach (Application elem in acces)
                     {
-
                         app.Add(new ApplicationBusinessModel
                         {
                             TodayDate = elem.TodayDate,
@@ -168,7 +167,15 @@ namespace BusinessLogic
 
                             Buildings = elem.Building,
 
-                            RestrictedAccess = elem.RestrictedAccess
+                            RestrictedAccess = elem.RestrictedAccess,
+
+                            Services = elem.Services,
+
+                            CompanyName = elem.CompanyName, 
+
+                            ApplicationID = elem.ApplicationId
+                            
+                            
 
 
                         });
@@ -180,7 +187,6 @@ namespace BusinessLogic
         }
 
 
-
         /// <summary>
         /// Register a new application into the system
         /// </summary>
@@ -189,10 +195,10 @@ namespace BusinessLogic
         {
             using (var ctx = new EmployeeApplicationConnectionString())
             {
-                var counter = ctx.Applications.Count(u => u.CompanyName == application.CompanyName );
+               // var counter = ctx.Applications.Count(u => u.CompanyName == application.CompanyName ); //If Apliccant only can registrer one aplication by company
                
-                if (counter == 0)
-                    {
+                //if (counter == 0)
+                    //{
                         var app = new Application
                         {
                             TodayDate=application.TodayDate,
@@ -212,13 +218,66 @@ namespace BusinessLogic
                         ctx.Applications.Add(app);
                         ctx.SaveChanges();
 
-                    }
+                    /*}
                     else
                     {
                         throw new Exception($"Aplication for ({application.CompanyName}) Company already exists");
-                    }
-               
+                    }  */             
             }
+        }
+
+
+
+        /// <summary>
+        /// Get application by Id into the system
+        /// </summary>
+        /// <param name="applicant">Application general info</param>
+        public ApplicationBusinessModel GetOneApplication(long? id)
+        {
+            ApplicationBusinessModel application = new ApplicationBusinessModel();
+
+            using (var ctx = new EmployeeApplicationConnectionString())
+            {
+                Application app = ctx.Applications.Find(id);
+
+                application = new ApplicationBusinessModel
+                {
+                    TodayDate = app.TodayDate,
+                    EmailManager = app.EmailManager,
+                    PositionHired = app.PositionHired,
+                    StartDate = app.StartDate,
+                    AdittionalServices = app.AditionalServices,
+                    AdittionalInformation = app.AditionalInformation,
+                    Buildings = app.Building,
+                    RestrictedAccess = app.RestrictedAccess,
+                    Services = app.Services,
+                    CompanyName = app.CompanyName,
+                    FullName = app.FullName,
+                    ApplicationID=(long)id
+                };
+            }
+           return application;
+        }
+
+
+        /// <summary>
+        /// Delete application application into the system
+        /// </summary>
+        /// <param name="applicant">Application general info</param>
+        public void DeleteApplication(ApplicationBusinessModel app)
+        {
+            using (var ctx = new EmployeeApplicationConnectionString())
+            {
+               var application = new Application
+                {                  
+                    UserId = app.UserId
+                };
+
+                ctx.Entry(application).State = EntityState.Deleted;             
+
+                ctx.SaveChanges();
+            }              
+
         }
 
         /// <summary>
@@ -305,6 +364,97 @@ namespace BusinessLogic
             }
             return concatenatedString.ToString();
         }
+
+
+
+
+        /// <summary>
+        /// Get List Services & Equipment Needed
+        /// </summary>
+        /// <returns></returns>
+        public List<CompanyBusinessModel> GetListCompanies()
+        {
+            List<CompanyBusinessModel> result = new List<CompanyBusinessModel>();
+            List<Company> list = new List<Company>();
+
+            using (var ctx = new EmployeeApplicationConnectionString())
+            {
+                list = ctx.Companies.ToList();
+            }
+
+            foreach (var item in list)
+            {
+                result.Add(new CompanyBusinessModel
+                {
+                    CompanyId = item.CompanyId,
+                    CompanyName = item.CompanyName                   
+                });
+            }
+            return result;
+        }
+
+
+        /// <summary>
+        /// Get List position new employee is being hired for 
+        /// </summary>
+        /// <param name="list">Lista de posiciones</param>
+        /// <param name="list">Id de la posicion</param>
+        /// <returns></returns>
+        public string GetCompanyName(List<CompanyBusinessModel> list, int? Id)
+        {
+            var result = list.Find(p => p.CompanyId == Id);
+            return result.CompanyName;
+        }
+
+
+
+
+        /// <summary>
+        /// Get List Services & Equipment Needed
+        /// </summary>
+        /// <returns></returns>
+        public List<BuildBusinessModel> GetBuilds()
+        {
+            List<BuildBusinessModel> result = new List<BuildBusinessModel>();
+            List<Build> list = new List<Build>();
+
+            using (var ctx = new EmployeeApplicationConnectionString())
+            {
+                list = ctx.Builds.ToList();
+            }
+
+            foreach (var item in list)
+            {
+                result.Add(new BuildBusinessModel
+                {
+                    BuildId = item.BuildId,
+                    BuildName = item.BuildName,
+                    IsSelected = false
+                });
+            }
+            return result;
+        }
+
+        /// <summary>
+        /// Concat Values to String. Only seleted services
+        /// </summary>
+        /// <returns></returns>
+        public string ConcatBuilds(List<BuildBusinessModel> list)
+        {
+            StringBuilder concatenatedString = new StringBuilder();
+
+            foreach (BuildBusinessModel build in list)
+            {
+                if (build.IsSelected == true)
+                {
+                    concatenatedString.Append(build.BuildName + ",");
+                }
+
+            }
+            return concatenatedString.ToString();
+        }
+
+
 
     }
 }

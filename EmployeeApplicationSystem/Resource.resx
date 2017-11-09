@@ -151,7 +151,7 @@
     <value>Passwords doesn't match</value>
   </data>
   <data name="RegisterNewApplicant" xml:space="preserve">
-    <value>Register New Applicant</value>
+    <value>Register New Applicant ( Manager rol will be developed for the next version )</value>
   </data>
   <data name="RequiredErrorMsg" xml:space="preserve">
     <value>{0} is required</value>
@@ -197,5 +197,17 @@
   </data>
   <data name="AccesLevel" xml:space="preserve">
     <value>Acces Level</value>
+  </data>
+  <data name="ApplicationDate" xml:space="preserve">
+    <value>Application Day</value>
+  </data>
+  <data name="User" xml:space="preserve">
+    <value>Looged User</value>
+  </data>
+  <data name="MainMessage" xml:space="preserve">
+    <value>Make your applications to get new opportunities.</value>
+  </data>
+  <data name="Welcome" xml:space="preserve">
+    <value>! Welcome</value>
   </data>
 </root>

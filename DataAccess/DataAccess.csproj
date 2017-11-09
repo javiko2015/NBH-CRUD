@@ -55,6 +55,12 @@
     <Compile Include="Application.cs">
       <DependentUpon>EmployeeApplicationModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Build.cs">
+      <DependentUpon>EmployeeApplicationModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Company.cs">
+      <DependentUpon>EmployeeApplicationModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="CompanyManager.cs">
       <DependentUpon>EmployeeApplicationModel.tt</DependentUpon>
     </Compile>

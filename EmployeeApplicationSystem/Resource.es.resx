@@ -151,7 +151,7 @@
     <value>Las contraseñas no coinciden</value>
   </data>
   <data name="RegisterNewApplicant" xml:space="preserve">
-    <value>Registrar nuevo aplicante</value>
+    <value>Registrar nuevo aplicante  ( El rol de Manager sera implementado próximamente )</value>
   </data>
   <data name="RequiredErrorMsg" xml:space="preserve">
     <value>{0} es obligatorio</value>
@@ -191,5 +191,17 @@
   </data>
   <data name="AccesLevel" xml:space="preserve">
     <value>Nivel de Acceso</value>
+  </data>
+  <data name="ApplicationDate" xml:space="preserve">
+    <value>Application Date</value>
+  </data>
+  <data name="User" xml:space="preserve">
+    <value>Usuario Logueado</value>
+  </data>
+  <data name="MainMessage" xml:space="preserve">
+    <value>Haga sus aplicaciones para obtener nuevas oportunidades.</value>
+  </data>
+  <data name="Welcome" xml:space="preserve">
+    <value>! Bienvenido</value>
   </data>
 </root>

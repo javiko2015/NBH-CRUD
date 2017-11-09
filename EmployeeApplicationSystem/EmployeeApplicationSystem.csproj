@@ -226,12 +226,12 @@
     <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Account\RegisterNewApplicant.cshtml" />
     <Content Include="Views\Account\Login.cshtml" />
-    <Content Include="Views\Application\Create.cshtml" />
     <Content Include="Views\Application\Delete.cshtml" />
     <Content Include="Views\Application\Details.cshtml" />
-    <Content Include="Views\Application\Edit.cshtml" />
     <Content Include="Views\Application\Index.cshtml" />
     <Content Include="Views\Application\RegisterNewApplication.cshtml" />
+    <Content Include="Views\Application\EditorTemplates\DateTime.cshtml" />
+    <Content Include="Views\Application\DisplayTemplates\DateTime.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

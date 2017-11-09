@@ -53,9 +53,9 @@
                                    
                       @foreach (var item in Model.ListPositionsHired)
                         {
-                        <div> @Html.RadioButtonFor(s => s.SelectedPositionHired, item.PositionId, new { onclick = "OcultarValidation()" }) @item.PositionName</div>
+                        <div> @Html.RadioButtonFor(s => s.SelectedPositionHired, item.PositionId, new { onclick = "HideValidation()" }) @item.PositionName</div>
                         }                     
-                     <div class='PositionValidation' style="color:#ee8929;"></div>
+                     <div class='PositionValidation' style="color:darkred;"></div>
                  </div> 
                  
              </div>       
@@ -87,117 +87,91 @@
 
             <button type="button" class="btn btn-light" onclick="MoveNextInitial()">SIGUIENTE</button>
 
-       </div>
-       
+       </div>       
         
-
-
-
-
-
-
-
-
-
-
-        
+             
       <div id="divStep2" style="display:none;"> 
-       <div class="form-group">
-                
-           
-           
-           
-           
-           @Html.LabelFor(model => model.Services, htmlAttributes: new { @class = "control-label col-md-2" })
-                
-           
-                <div class="col-md-10">
-                   
 
-
-                    <table>
-                        @for (int i = 0; i < Model.ListServices.Count; i++)
-                        {
-                            <tr>
-                                <td>
-                                    @Html.HiddenFor(x => Model.ListServices[i].ServiceId)
-                                    @Html.CheckBoxFor(x => Model.ListServices[i].IsSelected)
-                                    @Html.DisplayFor(x => Model.ListServices[i].ServiceName)
-                                    @Html.HiddenFor(x => Model.ListServices[i].ServiceName)
-                                </td>
-                            </tr>
-                        }
-                    </table>
-
-
-
-
-                  
+          <div class="form-group">     
+               @Html.LabelFor(model => model.Services, htmlAttributes: new { @class = "control-label col-md-2" })               
+                 <div class="col-md-10">                 
+                      <table>
+                            @for (int i = 0; i < Model.ListServices.Count; i++)
+                            {
+                                <tr>
+                                    <td>
+                                        @Html.HiddenFor(x => Model.ListServices[i].ServiceId)
+                                        @Html.CheckBoxFor(x => Model.ListServices[i].IsSelected , new { onclick = "HideValidation2()" })
+                                        @Html.DisplayFor(x => Model.ListServices[i].ServiceName)
+                                        @Html.HiddenFor(x => Model.ListServices[i].ServiceName)
+                                    </td>
+                                </tr>
+                            }
+                      </table> 
+                     <div class='PositionValidation2' style="color:darkred;"></div>
                 </div>
+          </div>
+
+          <div class="form-group">
+                    @Html.LabelFor(model => model.AdittionalServices, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.AdittionalServices, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.AdittionalServices, "", new { @class = "text-danger" })
+                    </div>
+                </div>  
+                <button type="button" class="btn btn-light" onclick="MoveNext()">SIGUIENTE</button>
+                <button type="button" class="btn btn-light" onclick="MoveBack()">ATRAZ</button>
+           </div>
 
 
 
-            </div>
+     <div id="divStep3" style="display:none;">
 
+         <div class="form-group">
+             @Html.LabelFor(model => model.SelectedCompany, htmlAttributes: new { @class = "control-label col-md-2" })
+             <div class="col-md-10">
 
+                 @foreach (var item in Model.ListCompanies)
+                {
+                     <div> @Html.RadioButtonFor(s => s.SelectedCompany, item.CompanyId, new { onclick = "HideValidation3()" }) @item.CompanyName</div>
+                 }
+                 <div class='PositionValidation3' style="color:darkred;"></div>
+             </div>
+         </div>
 
-
-
-
-
-
-
-            <div class="form-group">
-                @Html.LabelFor(model => model.AdittionalServices, htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.EditorFor(model => model.AdittionalServices, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.AdittionalServices, "", new { @class = "text-danger" })
-                </div>
-            </div>  
-            <button type="button" class="btn btn-light" onclick="MoveNext()">SIGUIENTE</button>
-            <button type="button" class="btn btn-light" onclick="MoveBack()">ATRAZ</button>
-       </div>
-
-
-
-
-
-
-
-
-
-
-
-
-        <div id="divStep3" style="display:none;">
-            <div class="form-group">
-                @Html.LabelFor(model => model.CompanyName, htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.EditorFor(model => model.CompanyName, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.CompanyName, "", new { @class = "text-danger" })
-                </div>
-            </div>
-
-            <div class="form-group">
-                @Html.LabelFor(model => model.AdittionalInformation, htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.EditorFor(model => model.AdittionalInformation, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.AdittionalInformation, "", new { @class = "text-danger" })
-                </div>
-            </div>
-            <button type="button" class="btn btn-light" onclick="MoveNext2()">SIGUIENTE</button>
-            <button type="button" class="btn btn-light" onclick="MoveBack2()">ATRAZ</button>
-        </div>
+             <div class="form-group">
+                 @Html.LabelFor(model => model.AdittionalInformation, htmlAttributes: new { @class = "control-label col-md-2" })
+                 <div class="col-md-10">
+                     @Html.EditorFor(model => model.AdittionalInformation, new { htmlAttributes = new { @class = "form-control" } })
+                     @Html.ValidationMessageFor(model => model.AdittionalInformation, "", new { @class = "text-danger" })
+                 </div>
+             </div>
+             <button type="button" class="btn btn-light" onclick="MoveNext2()">SIGUIENTE</button>
+             <button type="button" class="btn btn-light" onclick="MoveBack2()">ATRAZ</button>
+         </div>
 
 
         <div id="divStep4" style="display:none;">
             <div class="form-group">
                 @Html.LabelFor(model => model.Buildings, htmlAttributes: new { @class = "control-label col-md-2" })
                 <div class="col-md-10">
-                    @Html.EditorFor(model => model.Buildings, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.Buildings, "", new { @class = "text-danger" })
+                    <table>
+                        @for (int i = 0; i < Model.ListBuilds.Count; i++)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.HiddenFor(x => Model.ListBuilds[i].BuildId)
+                                    @Html.CheckBoxFor(x => Model.ListBuilds[i].IsSelected, new { onclick = "HideValidation4()" })
+                                    @Html.DisplayFor(x => Model.ListBuilds[i].BuildName)
+                                    @Html.HiddenFor(x => Model.ListBuilds[i].BuildName)
+                                </td>
+                            </tr>
+                        }
+                    </table>
+                    <div class='PositionValidation4' style="color:darkred;"></div>
                 </div>
-            </div>          
+              
+            </div>         
 
             <div class="form-group">
                 @Html.LabelFor(model => model.RestrictedAccess, htmlAttributes: new { @class = "control-label col-md-2" })
@@ -207,7 +181,7 @@
                 </div>
             </div>
              <button type="button" class="btn btn-light" onclick="MoveBackFinal()">ATRAZ</button>
-             <button type="submit" class="btn btn-primary" value="Submit">SUBMIT</button>
+             <button type="submit" class="btn btn-primary" value="Submit" onclick="BtnSubmit()">SUBMIT</button>
         </div>
 
   </div>
@@ -228,31 +202,52 @@
         function MoveNextInitial() {
             $("#frmRegister").validate();
 
-            if ($("#frmRegister").valid() && $("input[name='SelectedPositionHired']:checked").length > 0)
+            if ($("#frmRegister").valid() && $("input[name='SelectedPositionHired']:checked").length > 0) 
             {
                 $("#divStep1").hide();
                 $("#divStep2").fadeIn();
             }
             else {
-                $('.PositionValidation').text("Position is required.");
+                $('.PositionValidation').text("Position is required."); 
             }
         }       
               
         function MoveNext() {
             $("#frmRegister").validate();
 
-            if ($("#frmRegister").valid()) {
+            if ($("#frmRegister").valid() && ($("input[name*='ListServices']:checked").length) > 0) 
+            {
                 $("#divStep2").hide();
                 $("#divStep3").fadeIn();
             }
+            else {
+                $('.PositionValidation2').text("Service is required.");
+            }
+
         }
 
         function MoveNext2() {
             $("#frmRegister").validate();
 
-            if ($("#frmRegister").valid()) {
+            if ($("#frmRegister").valid() && $("input[name='SelectedCompany']:checked").length > 0)
+            {
                 $("#divStep3").hide();
                 $("#divStep4").fadeIn();
+            }
+            else {
+                $('.PositionValidation3').text("Company is required.");
+            }
+        } 
+
+        function BtnSubmit() {
+            $("#frmRegister").validate();
+
+            if ($("#frmRegister").valid() && ($("input[name*='ListBuilds']:checked").length) > 0) {
+
+                $("#frmRegister").submit();
+            }
+            else {
+                $('.PositionValidation4').text("Service is required.");
             }
         }
 
@@ -278,13 +273,33 @@
         }
 
 
-
-        function OcultarValidation() {
+        function HideValidation() {
             if ($("input[name='SelectedPositionHired']:checked").length > 0) {
                 $('.PositionValidation').hide();
             }
         }
 
+        function HideValidation2() {
+            if (($("input[name*='ListServices']:checked").length) > 0) {
+
+                $('.PositionValidation2').hide();
+            }
+            else $('.PositionValidation2').show();
+        }
+
+        function HideValidation3() {
+            if ($("input[name='SelectedCompany']:checked").length > 0)
+            {
+                $('.PositionValidation3').hide();
+            }
+        }
+
+        function HideValidation4() {
+            if (($("input[name*='ListBuilds']:checked").length) > 0) {               
+                $('.PositionValidation4').hide();
+            }
+            else $('.PositionValidation4').show();
+        }
 
 
     </script>

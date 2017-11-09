@@ -12,10 +12,10 @@ namespace DataAccess
     using System;
     using System.Collections.Generic;
     
-    public partial class Position
+    public partial class Company
     {
-        public long PositionId { get; set; }
-        public string PositionName { get; set; }
+        public long CompanyId { get; set; }
+        public string CompanyName { get; set; }
         public Nullable<long> UserId { get; set; }
     }
 }

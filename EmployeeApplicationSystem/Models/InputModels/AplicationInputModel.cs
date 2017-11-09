@@ -88,10 +88,15 @@ namespace EmployeeApplicationSystem.Models.InputModels
 
         public List<PositionBusinessModel> ListPositionsHired { set; get; }
 
+        [Display(Name = "CompanyName", ResourceType = typeof(Resource))]
+        [Required]
+        public int? SelectedCompany { set; get; }
+
+        public List<CompanyBusinessModel> ListCompanies { set; get; }
+
         public List<ServicesBusinessModel> ListServices { set; get; }
 
-
-
+        public List<BuildBusinessModel> ListBuilds { set; get; }
 
 
     }

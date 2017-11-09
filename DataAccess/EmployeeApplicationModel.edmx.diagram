@@ -4,16 +4,18 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="5c041f54d35d4d96bdf8597ab0210b80" Name="Diagram1" ZoomLevel="86">
-        <EntityTypeShape EntityType="EmployeeApplicationNamespace.Applicant" Width="1.5" PointX="3" PointY="2.125" />
-        <EntityTypeShape EntityType="EmployeeApplicationNamespace.Application" Width="1.5" PointX="5.5" PointY="2.375" />
-        <EntityTypeShape EntityType="EmployeeApplicationNamespace.CompanyManager" Width="1.5" PointX="3" PointY="4.375" />
+      <Diagram DiagramId="5c041f54d35d4d96bdf8597ab0210b80" Name="Diagram1" ZoomLevel="95">
+        <EntityTypeShape EntityType="EmployeeApplicationNamespace.Applicant" Width="1.5" PointX="3" PointY="4.625" />
+        <EntityTypeShape EntityType="EmployeeApplicationNamespace.Application" Width="1.5" PointX="5.25" PointY="2.625" />
+        <EntityTypeShape EntityType="EmployeeApplicationNamespace.Build" Width="1.5" PointX="7.25" PointY="2.75" />
+        <EntityTypeShape EntityType="EmployeeApplicationNamespace.Company" Width="1.5" PointX="9.125" PointY="2.75" />
+        <EntityTypeShape EntityType="EmployeeApplicationNamespace.CompanyManager" Width="1.5" PointX="3" PointY="2.625" />
+        <EntityTypeShape EntityType="EmployeeApplicationNamespace.Position" Width="1.5" PointX="9.125" PointY="4.625" />
+        <EntityTypeShape EntityType="EmployeeApplicationNamespace.Service" Width="1.5" PointX="7.25" PointY="4.625" />
         <EntityTypeShape EntityType="EmployeeApplicationNamespace.User" Width="1.5" PointX="0.75" PointY="2.875" />
         <AssociationConnector Association="EmployeeApplicationNamespace.FK_Applicant_User" />
         <AssociationConnector Association="EmployeeApplicationNamespace.FK_Application_Applicant" />
         <AssociationConnector Association="EmployeeApplicationNamespace.FK_CompanyManager_User" />
-        <EntityTypeShape EntityType="EmployeeApplicationNamespace.Position" Width="1.5" PointX="7.5" PointY="4.5" />
-        <EntityTypeShape EntityType="EmployeeApplicationNamespace.Service" Width="1.5" PointX="7.5" PointY="2.125" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

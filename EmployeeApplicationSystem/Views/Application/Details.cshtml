@@ -1,10 +1,10 @@
-﻿@model DataAccess.Application
+﻿@model BusinessLogic.BusinessModels.ApplicationBusinessModel
 
 @{
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
+<h2>Details whit all fields of Application (Need to better)</h2>
 
 <div>
     <h4>Application</h4>
@@ -43,35 +43,27 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.AditionalServices)
+            @Html.DisplayNameFor(model => model.AdittionalServices)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.AditionalServices)
+            @Html.DisplayFor(model => model.AdittionalServices)
+        </dd>
+
+               <dt>
+            @Html.DisplayNameFor(model => model.AdittionalInformation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AdittionalInformation)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.AccessLevel)
+            @Html.DisplayNameFor(model => model.Buildings)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.AccessLevel)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.AditionalInformation)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.AditionalInformation)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Building)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Building)
+            @Html.DisplayFor(model => model.Buildings)
         </dd>
 
         <dt>
@@ -80,19 +72,10 @@
 
         <dd>
             @Html.DisplayFor(model => model.RestrictedAccess)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Applicant.MobileNumber)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Applicant.MobileNumber)
-        </dd>
+        </dd>    
 
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.ApplicationId }) |
     @Html.ActionLink("Back to List", "Index")
 </p>

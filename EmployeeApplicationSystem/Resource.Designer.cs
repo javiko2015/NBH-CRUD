@@ -88,6 +88,15 @@ namespace EmployeeApplicationSystem {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Application Day.
+        /// </summary>
+        public static string ApplicationDate {
+            get {
+                return ResourceManager.GetString("ApplicationDate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Buildings.
         /// </summary>
         public static string Buildings {
@@ -196,6 +205,15 @@ namespace EmployeeApplicationSystem {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Make your applications to get new opportunities..
+        /// </summary>
+        public static string MainMessage {
+            get {
+                return ResourceManager.GetString("MainMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Mobile.
         /// </summary>
         public static string Mobile {
@@ -232,7 +250,7 @@ namespace EmployeeApplicationSystem {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Register New Applicant.
+        ///   Looks up a localized string similar to Register New Applicant ( Manager rol will be developed for the next version ).
         /// </summary>
         public static string RegisterNewApplicant {
             get {
@@ -286,6 +304,15 @@ namespace EmployeeApplicationSystem {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Looged User.
+        /// </summary>
+        public static string User {
+            get {
+                return ResourceManager.GetString("User", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Username.
         /// </summary>
         public static string Username {
@@ -300,6 +327,15 @@ namespace EmployeeApplicationSystem {
         public static string UserOrPasswordIncorrect {
             get {
                 return ResourceManager.GetString("UserOrPasswordIncorrect", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ! Welcome.
+        /// </summary>
+        public static string Welcome {
+            get {
+                return ResourceManager.GetString("Welcome", resourceCulture);
             }
         }
     }

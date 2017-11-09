@@ -1,4 +1,4 @@
-﻿@model DataAccess.Application
+﻿@model BusinessLogic.BusinessModels.ApplicationBusinessModel
 
 @{
     ViewBag.Title = "Delete";
@@ -17,15 +17,7 @@
 
         <dd>
             @Html.DisplayFor(model => model.TodayDate)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.EmailManager)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.EmailManager)
-        </dd>
+        </dd>       
 
         <dt>
             @Html.DisplayNameFor(model => model.PositionHired)
@@ -42,54 +34,7 @@
         <dd>
             @Html.DisplayFor(model => model.StartDate)
         </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.AditionalServices)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.AditionalServices)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.AccessLevel)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.AccessLevel)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.AditionalInformation)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.AditionalInformation)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Building)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Building)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.RestrictedAccess)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.RestrictedAccess)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Applicant.MobileNumber)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Applicant.MobileNumber)
-        </dd>
+        
 
     </dl>
 

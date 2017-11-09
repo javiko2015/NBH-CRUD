@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations;
 
 namespace BusinessLogic.BusinessModels
 {
     public class ApplicationBusinessModel
     {
+        public long ApplicationID { get; set; }
+     
         public DateTime TodayDate { get; set; }
 
         public string EmailManager { get; set; }

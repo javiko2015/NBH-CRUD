@@ -16,7 +16,7 @@
           <Key>
             <PropertyRef Name="ApplicationId" />
           </Key>
-          <Property Name="ApplicationId" Type="bigint" Nullable="false" />
+          <Property Name="ApplicationId" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="UserId" Type="bigint" />
           <Property Name="TodayDate" Type="date" Nullable="false" />
           <Property Name="EmailManager" Type="varchar" MaxLength="100" />
@@ -29,6 +29,22 @@
           <Property Name="Services" Type="varchar" MaxLength="400" />
           <Property Name="CompanyName" Type="varchar" MaxLength="100" />
           <Property Name="FullName" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="Build">
+          <Key>
+            <PropertyRef Name="BuildId" />
+          </Key>
+          <Property Name="BuildId" Type="bigint" Nullable="false" />
+          <Property Name="BuildName" Type="varchar" MaxLength="100" />
+          <Property Name="UseriId" Type="bigint" />
+        </EntityType>
+        <EntityType Name="Company">
+          <Key>
+            <PropertyRef Name="CompanyId" />
+          </Key>
+          <Property Name="CompanyId" Type="bigint" Nullable="false" />
+          <Property Name="CompanyName" Type="varchar" MaxLength="200" />
+          <Property Name="UserId" Type="bigint" />
         </EntityType>
         <EntityType Name="CompanyManager">
           <Key>
@@ -43,7 +59,7 @@
           </Key>
           <Property Name="PositionId" Type="bigint" Nullable="false" />
           <Property Name="PositionName" Type="varchar" MaxLength="100" />
-          <Property Name="UserId" Type="varchar" MaxLength="100" />
+          <Property Name="UserId" Type="bigint" />
         </EntityType>
         <EntityType Name="Service">
           <Key>
@@ -51,7 +67,7 @@
           </Key>
           <Property Name="ServiceId" Type="bigint" Nullable="false" />
           <Property Name="ServiceName" Type="varchar" MaxLength="100" />
-          <Property Name="UserId" Type="varchar" MaxLength="100" />
+          <Property Name="UserId" Type="bigint" />
         </EntityType>
         <EntityType Name="User">
           <Key>
@@ -103,6 +119,8 @@
         <EntityContainer Name="EmployeeApplicationNamespaceStoreContainer">
           <EntitySet Name="Applicant" EntityType="Self.Applicant" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Application" EntityType="Self.Application" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Build" EntityType="Self.Build" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Company" EntityType="Self.Company" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="CompanyManager" EntityType="Self.CompanyManager" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Position" EntityType="Self.Position" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Service" EntityType="Self.Service" Schema="dbo" store:Type="Tables" />
@@ -127,7 +145,11 @@
         <EntityContainer Name="EmployeeApplicationConnectionString" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Applicants" EntityType="EmployeeApplicationNamespace.Applicant" />
           <EntitySet Name="Applications" EntityType="EmployeeApplicationNamespace.Application" />
+          <EntitySet Name="Builds" EntityType="EmployeeApplicationNamespace.Build" />
+          <EntitySet Name="Companies" EntityType="EmployeeApplicationNamespace.Company" />
           <EntitySet Name="CompanyManagers" EntityType="EmployeeApplicationNamespace.CompanyManager" />
+          <EntitySet Name="Positions" EntityType="EmployeeApplicationNamespace.Position" />
+          <EntitySet Name="Services" EntityType="EmployeeApplicationNamespace.Service" />
           <EntitySet Name="Users" EntityType="EmployeeApplicationNamespace.User" />
           <AssociationSet Name="FK_Applicant_User" Association="EmployeeApplicationNamespace.FK_Applicant_User">
             <End Role="User" EntitySet="Users" />
@@ -141,8 +163,6 @@
             <End Role="User" EntitySet="Users" />
             <End Role="CompanyManager" EntitySet="CompanyManagers" />
           </AssociationSet>
-          <EntitySet Name="Positions" EntityType="EmployeeApplicationNamespace.Position" />
-          <EntitySet Name="Services" EntityType="EmployeeApplicationNamespace.Service" />
         </EntityContainer>
         <EntityType Name="Applicant">
           <Key>
@@ -157,7 +177,7 @@
           <Key>
             <PropertyRef Name="ApplicationId" />
           </Key>
-          <Property Name="ApplicationId" Type="Int64" Nullable="false" />
+          <Property Name="ApplicationId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="UserId" Type="Int64" />
           <Property Name="TodayDate" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="EmailManager" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
@@ -169,8 +189,24 @@
           <Property Name="RestrictedAccess" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
           <Property Name="Services" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
           <Property Name="CompanyName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="Applicant" Relationship="EmployeeApplicationNamespace.FK_Application_Applicant" FromRole="Application" ToRole="Applicant" />
           <Property Name="FullName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Applicant" Relationship="EmployeeApplicationNamespace.FK_Application_Applicant" FromRole="Application" ToRole="Applicant" />
+        </EntityType>
+        <EntityType Name="Build">
+          <Key>
+            <PropertyRef Name="BuildId" />
+          </Key>
+          <Property Name="BuildId" Type="Int64" Nullable="false" />
+          <Property Name="BuildName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="UseriId" Type="Int64" />
+        </EntityType>
+        <EntityType Name="Company">
+          <Key>
+            <PropertyRef Name="CompanyId" />
+          </Key>
+          <Property Name="CompanyId" Type="Int64" Nullable="false" />
+          <Property Name="CompanyName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="UserId" Type="Int64" />
         </EntityType>
         <EntityType Name="CompanyManager">
           <Key>
@@ -179,6 +215,22 @@
           <Property Name="UserId" Type="Int64" Nullable="false" />
           <Property Name="CompanyName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="User" Relationship="EmployeeApplicationNamespace.FK_CompanyManager_User" FromRole="CompanyManager" ToRole="User" />
+        </EntityType>
+        <EntityType Name="Position">
+          <Key>
+            <PropertyRef Name="PositionId" />
+          </Key>
+          <Property Name="PositionId" Type="Int64" Nullable="false" />
+          <Property Name="PositionName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="UserId" Type="Int64" />
+        </EntityType>
+        <EntityType Name="Service">
+          <Key>
+            <PropertyRef Name="ServiceId" />
+          </Key>
+          <Property Name="ServiceId" Type="Int64" Nullable="false" />
+          <Property Name="ServiceName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="UserId" Type="Int64" />
         </EntityType>
         <EntityType Name="User">
           <Key>
@@ -229,22 +281,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityType Name="Position">
-          <Key>
-            <PropertyRef Name="PositionId" />
-          </Key>
-          <Property Name="PositionId" Type="Int64" Nullable="false" />
-          <Property Name="PositionName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="UserId" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-        </EntityType>
-        <EntityType Name="Service">
-          <Key>
-            <PropertyRef Name="ServiceId" />
-          </Key>
-          <Property Name="ServiceId" Type="Int64" Nullable="false" />
-          <Property Name="ServiceName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="UserId" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-        </EntityType>
         </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -278,22 +314,28 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="Builds">
+            <EntityTypeMapping TypeName="EmployeeApplicationNamespace.Build">
+              <MappingFragment StoreEntitySet="Build">
+                <ScalarProperty Name="UseriId" ColumnName="UseriId" />
+                <ScalarProperty Name="BuildName" ColumnName="BuildName" />
+                <ScalarProperty Name="BuildId" ColumnName="BuildId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Companies">
+            <EntityTypeMapping TypeName="EmployeeApplicationNamespace.Company">
+              <MappingFragment StoreEntitySet="Company">
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+                <ScalarProperty Name="CompanyId" ColumnName="CompanyId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="CompanyManagers">
             <EntityTypeMapping TypeName="EmployeeApplicationNamespace.CompanyManager">
               <MappingFragment StoreEntitySet="CompanyManager">
                 <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
-                <ScalarProperty Name="UserId" ColumnName="UserId" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Users">
-            <EntityTypeMapping TypeName="EmployeeApplicationNamespace.User">
-              <MappingFragment StoreEntitySet="User">
-                <ScalarProperty Name="Email" ColumnName="Email" />
-                <ScalarProperty Name="LastName" ColumnName="LastName" />
-                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
-                <ScalarProperty Name="Password" ColumnName="Password" />
-                <ScalarProperty Name="UserName" ColumnName="UserName" />
                 <ScalarProperty Name="UserId" ColumnName="UserId" />
               </MappingFragment>
             </EntityTypeMapping>
@@ -313,6 +355,18 @@
                 <ScalarProperty Name="UserId" ColumnName="UserId" />
                 <ScalarProperty Name="ServiceName" ColumnName="ServiceName" />
                 <ScalarProperty Name="ServiceId" ColumnName="ServiceId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="EmployeeApplicationNamespace.User">
+              <MappingFragment StoreEntitySet="User">
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
