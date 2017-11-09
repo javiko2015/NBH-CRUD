@@ -4,8 +4,9 @@ Test-Build CRUD
 - I made a design of the business model consisting of the following:
      
  There are two user roles  
-      + Applicants: After registering as a user they will have control in their dashboard to manage their work applications. They will only have access to see the list of their own applications. An Applicant can only register one application per company
-      + Managers: After registering as a user they will have control in their dashboard to manage the applications that have been made in the name of their company.
+
+ 1-Applicants: After registering as a user they will have control in their dashboard to manage their work applications. They will only have access to see the list of their own applications. An Applicant can only register one application per company
+ 2-Managers: After registering as a user they will have control in their dashboard to manage the applications that have been made in the name of their company.
 
 - I used MVC Pattern whit 3 layer Architecture ( Bussines Logic, Acces Data, and Presentation ) (I added additional Test Layers for future tests).
 
