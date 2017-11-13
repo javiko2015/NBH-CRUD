@@ -61,8 +61,9 @@ namespace EmployeeApplicationSystem.Controllers
                         Services = logic.ConcatServices(model.ListServices),                    
                         UserId = user.UserId
                     };
-                    
-                model.ListPositionsHired = logic.GetListPositions();
+
+                    logic.RegisterNewApplication(bm);  
+
                 return  RedirectToAction("Index");
             }
             catch (Exception ex)
