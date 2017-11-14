@@ -86,6 +86,8 @@ namespace EmployeeApplicationSystem.Models.InputModels
         [Required]
         public int? SelectedPositionHired { set; get; }
 
+        public string SelectedPositionOther { set; get; }
+
         public List<PositionBusinessModel> ListPositionsHired { set; get; }
 
         [Display(Name = "CompanyName", ResourceType = typeof(Resource))]

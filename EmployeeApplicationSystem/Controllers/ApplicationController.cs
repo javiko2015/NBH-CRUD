@@ -40,16 +40,16 @@ namespace EmployeeApplicationSystem.Controllers
         {
             try
             {
-                var logic = new AccountLogic();
-
+                    var logic = new AccountLogic();
                     var user = Newtonsoft.Json.JsonConvert.DeserializeObject<LoginViewModel>(User.Identity.Name);
-                    //do something
+                    string FinalPosition = logic.GetPositionName(logic.GetListPositions(), model.SelectedPositionHired, model.SelectedPositionOther);
+
                     var bm = new ApplicationBusinessModel
                     {
                         TodayDate = model.TodayDate,
                         EmailManager = model.EmailManager,
                         FullName = model.FullName,
-                        PositionHired = logic.GetPositionName(logic.GetListPositions(), model.SelectedPositionHired), 
+                        PositionHired = FinalPosition,                         
                         Email = model.Email,
                         MobileNumber = model.MobileNumber,
                         StartDate = model.StartDate,

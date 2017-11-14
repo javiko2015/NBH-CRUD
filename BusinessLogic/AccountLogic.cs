@@ -312,10 +312,16 @@ namespace BusinessLogic
         /// <param name="list">Lista de posiciones</param>
         /// <param name="list">Id de la posicion</param>
         /// <returns></returns>
-        public string GetPositionName(List<PositionBusinessModel> list, int? Id)
+        public string GetPositionName(List<PositionBusinessModel> list, int? Id, string selectedpother)
         {
-            var result = list.Find(p => p.PositionId == Id);
-            return result.PositionName;
+            string result = "";           
+
+            if (list.Count() < Id)
+                result = selectedpother;
+            else
+                result = list[(int)(Id-1)].PositionName.ToString(); 
+
+            return result;            
         }
 
 

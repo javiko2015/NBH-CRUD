@@ -54,7 +54,12 @@
                       @foreach (var item in Model.ListPositionsHired)
                         {
                         <div> @Html.RadioButtonFor(s => s.SelectedPositionHired, item.PositionId, new { onclick = "HideValidation()" }) @item.PositionName</div>
-                        }                     
+                        }
+                        
+                        <div>
+                            @Html.RadioButtonFor(s => s.SelectedPositionHired, Model.ListPositionsHired.Count()+1, new { id = "idRadio", onclick = "HideValidation5()" })                            
+                            @Html.TextBoxFor(s => s.SelectedPositionOther, "", new { id = "otherposition", onkeyup = "SelectRadio()"})          
+                        </div>
                      <div class='PositionValidation' style="color:darkred;"></div>
                  </div> 
                  
@@ -132,7 +137,7 @@
              <div class="col-md-10">
 
                  @foreach (var item in Model.ListCompanies)
-                {
+                            {
                      <div> @Html.RadioButtonFor(s => s.SelectedCompany, item.CompanyId, new { onclick = "HideValidation3()" }) @item.CompanyName</div>
                  }
                  <div class='PositionValidation3' style="color:darkred;"></div>
@@ -191,53 +196,57 @@
 
 
 
-
 @section Scripts { @Scripts.Render("~/bundles/jqueryval")}
 
 
     <script type="text/javascript">
 
-     // *** Validatons *** 
+        // *** Validatons *** 
 
         function MoveNextInitial() {
             $("#frmRegister").validate();
-
             if ($("#frmRegister").valid() && $("input[name='SelectedPositionHired']:checked").length > 0) 
             {
-                $("#divStep1").hide();
-                $("#divStep2").fadeIn();
+             $("#divStep1").hide();
+             $("#divStep2").fadeIn();
             }
-            else {
-                $('.PositionValidation').text("Position is required."); 
-            }
-        }       
-              
+            else
+            $('.PositionValidation').text("Position is required.");         
+        }
+
         function MoveNext() {
             $("#frmRegister").validate();
-
             if ($("#frmRegister").valid() && ($("input[name*='ListServices']:checked").length) > 0) 
             {
-                $("#divStep2").hide();
-                $("#divStep3").fadeIn();
+             $("#divStep2").hide();
+             $("#divStep3").fadeIn();
             }
-            else {
-                $('.PositionValidation2').text("Service is required.");
-            }
-
+            else 
+             $('.PositionValidation2').text("Service is required.");
+                              
         }
 
         function MoveNext2() {
             $("#frmRegister").validate();
-
             if ($("#frmRegister").valid() && $("input[name='SelectedCompany']:checked").length > 0)
             {
-                $("#divStep3").hide();
-                $("#divStep4").fadeIn();
+             $("#divStep3").hide();
+             $("#divStep4").fadeIn();
             }
-            else {
-                $('.PositionValidation3').text("Company is required.");
-            }
+            else 
+             $('.PositionValidation3').text("Company is required.");                               
         } 
+
+        function SelectRadio() {                               
+             $('#idRadio').prop('checked', 'checked');
+             $('.PositionValidation').hide(); 
+             }
+
+        function changeRadioValue(newValue) {
+            if ($("#idRadio").is(":checked")) {
+                $('input[name=SelectedPositionHired]:checked', '#frmRegister').val(newValue);                
+            }            
+        }
 
         function BtnSubmit() {
             $("#frmRegister").validate();
@@ -272,7 +281,6 @@
             $("#divStep3").fadeIn();
         }
 
-
         function HideValidation() {
             if ($("input[name='SelectedPositionHired']:checked").length > 0) {
                 $('.PositionValidation').hide();
@@ -301,5 +309,15 @@
             else $('.PositionValidation4').show();
         }
 
+        function HideValidation5() {
+            if ($("input[name='SelectedPositionHired']:checked").length > 0) {               
+                $('.PositionValidation').text("Position is required.");
+                $('.PositionValidation').show();
+            }
+            if ($('input:text[name=SelectedPositionOther]').val().length != 0) {
+                $('.PositionValidation').hide();
+            }
+
+        }
 
     </script>
